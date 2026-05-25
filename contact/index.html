@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/prh-web/contact/">
+<!-- BASE:END -->
+
+<base href="https://preferredrh.com/">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="canonical" href="https://preferredrh.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777413942406-ad9fd1544abc161f.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Contact Us | Preferred Residential Homes</title>
+<meta name="description" content="Contact Preferred Residential Homes in Tolleson, AZ. Call (623) 385-2064, email us, or send a message. We respond within 1 business day." />
+<meta property="og:title" content="Contact Us | Preferred Residential Homes" />
+<meta property="og:description" content="Contact Preferred Residential Homes in Tolleson, AZ. Call (623) 385-2064, email us, or send a message. We respond within 1 business day." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact Us | Preferred Residential Homes" />
+<meta name="twitter:description" content="Contact Preferred Residential Homes in Tolleson, AZ. Call (623) 385-2064, email us, or send a message. We respond within 1 business day." />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.calldirector.ai/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4318');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='3mRSegG';
+  var apiBase='https://app.calldirector.ai';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav data-section="navbar" id="mainNav" role="navigation" aria-label="Main navigation">
+  <a href="https://preferredrh.com/" class="nav-logo" aria-label="Preferred Residential Homes Home">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.18)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.95"/><path d="M28 11L11 24L45 24L28 11Z" fill="white"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><rect x="14" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><rect x="36" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/><path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.7"/></svg>
+    <span class="nav-logo-text">Preferred Residential Homes</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://preferredrh.com/services.html">Services</a></li>
+    <li><a href="https://preferredrh.com/about.html">About Us</a></li><li><a href="https://preferredrh.com/contact.html" class="active">Contact</a></li>
+    <li><a href="https://preferredrh.com/intake.html" class="nav-cta">Start Intake</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+<div data-section="mobile-menu" class="mobile-menu" id="mobileMenu">
+  <a href="https://preferredrh.com/services.html">Services</a><a href="https://preferredrh.com/about.html">About Us</a><a href="https://preferredrh.com/contact.html">Contact</a>
+  <a href="https://preferredrh.com/intake.html" class="nav-cta">Start Intake Process</a>
+</div>
+<main>
+<section data-section="hero" id="page-hero" aria-label="Contact page hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-breadcrumb"><a href="https://preferredrh.com/">Home</a> &rsaquo; Contact</div>
+    <h1>Contact Us</h1>
+    <p>We're here to answer your questions. Reach out by phone, email, or send us a message below &mdash; we respond within 1 business day.</p>
+  </div>
+</section>
+<section data-section="contact" id="contact-main" aria-label="Contact information and form">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div>
+        <span class="section-label">Get In Touch</span>
+        <h2 class="contact-info-heading">We'd Love to Hear From You</h2>
+        <p class="contact-info-intro">Whether you have questions about our services, want to learn about availability, or are ready to begin the intake process &mdash; our team is ready to help.</p>
+      </div>
+      <div class="info-card"><div class="info-card-icon" style="background:#EBF5FB"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg></div><div class="info-card-text"><strong>Phone</strong><a href="tel:6233852064">(623) 385-2064</a><span class="sub">Monday &ndash; Friday, 9AM &ndash; 5PM MST</span></div></div>
+      <div class="info-card"><div class="info-card-icon" style="background:#EBF5FB"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="info-card-text"><strong>General Inquiries</strong><a href="mailto:info@preferredrh.com">info@preferredrh.com</a><strong style="margin-top:10px">Intake &amp; Referrals</strong><a href="mailto:intake@preferredrh.com">intake@preferredrh.com</a></div></div>
+      <div class="info-card"><div class="info-card-icon" style="background:#EAFAF1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="info-card-text"><strong>Location</strong><span>4050 S 94th Ln</span><span>Tolleson, AZ 85353</span><span class="sub">AZ ADHS License #BHRF2015</span></div></div>
+      <div class="info-card"><div class="info-card-icon" style="background:#EBF5FB"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div class="info-card-text"><strong>Office Hours</strong><span>Monday &ndash; Friday: 9:00 AM &ndash; 5:00 PM</span><span class="sub">Residential care staffed 24/7</span></div></div>
+      <div class="map-placeholder" role="img" aria-label="Map showing location at 4050 S 94th Ln, Tolleson, AZ 85353">
+        <div class="map-placeholder-inner">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <strong>Preferred Residential Homes</strong>
+          <p>4050 S 94th Ln, Tolleson, AZ 85353</p>
+          <a href="https://maps.google.com/?q=4050+S+94th+Ln+Tolleson+AZ+85353" target="_blank" rel="noopener noreferrer" class="map-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Open in Google Maps</a>
+        </div>
+      </div>
+      <div class="intake-prompt"><h4>Ready to start the intake process?</h4><p>For placement inquiries, our full intake form collects everything we need to get started quickly.</p><a href="https://preferredrh.com/intake.html" class="btn-intake-sm">Begin Intake &rarr;</a></div>
+    </div>
+    <div class="contact-form-wrap">
+      <div class="form-header"><h2>Send Us a Message</h2><p>Have a question? Fill out the form and we'll get back to you within 1 business day.</p></div>
+      <div class="form-body">
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group"><label for="cName">Full Name <span class="req">*</span></label><input type="text" id="cName" placeholder="Your full name" autocomplete="name"><span class="error-msg" id="cName-err">Please enter your name.</span></div>
+            <div class="form-group"><label for="cPhone">Phone Number</label><input type="tel" id="cPhone" placeholder="(XXX) XXX-XXXX" autocomplete="tel"></div>
+          </div>
+          <div class="form-row full" style="margin-bottom:20px"><div class="form-group"><label for="cEmail">Email Address <span class="req">*</span></label><input type="email" id="cEmail" placeholder="your@email.com" autocomplete="email"><span class="error-msg" id="cEmail-err">Please enter a valid email.</span></div></div>
+          <div class="form-row full" style="margin-bottom:20px"><div class="form-group"><label for="cSubject">Subject <span class="req">*</span></label><select id="cSubject"><option value="">Select a topic...</option><option>General Inquiry</option><option>Placement / Availability</option><option>Referral Information</option><option>Licensing &amp; Compliance</option><option>Employment Opportunities</option><option>Other</option></select><span class="error-msg" id="cSubject-err">Please select a subject.</span></div></div>
+          <div class="form-row full" style="margin-bottom:28px"><div class="form-group"><label for="cMessage">Message <span class="req">*</span></label><textarea id="cMessage" placeholder="How can we help you?" rows="5"></textarea><span class="error-msg" id="cMessage-err">Please enter your message.</span></div></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+            <button class="btn-submit" id="contactSubmit" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>Send Message</button>
+            <span style="font-size:.78rem;color:var(--text-light);display:flex;align-items:center;gap:6px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Sent to info@preferredrh.com</span>
+          </div>
+        </div>
+        <div class="form-success" id="contactSuccess">
+          <div class="form-success-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2.5" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. A member of our team will respond to you within 1 business day.</p>
+          <p style="margin-top:12px;font-size:.85rem;color:var(--text-light)">For urgent needs, call us directly at <a href="tel:6233852064" style="color:var(--primary-light);font-weight:600">(623) 385-2064</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-section="faq" id="faq" aria-labelledby="faq-heading">
+  <div class="faq-inner">
+    <div style="text-align:center;margin-bottom:8px"><span class="section-label">Common Questions</span></div>
+    <h2 class="section-title" id="faq-heading" style="text-align:center">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-card"><h4>How do I refer a child to Preferred Residential Homes?</h4><p>Submit a referral through our online intake form, call us at (623) 385-2064, or email intake@preferredrh.com. We'll respond within 1 business day.</p></div>
+      <div class="faq-card"><h4>What ages do you serve?</h4><p>We provide behavioral residential care services for children and youth. Please contact us directly to confirm current age ranges and availability for specific cases.</p></div>
+      <div class="faq-card"><h4>What is your current capacity?</h4><p>We are licensed for up to 5 residents. Availability varies — contact us directly for current placement openings.</p></div>
+      <div class="faq-card"><h4>Are you licensed by the State of Arizona?</h4><p>Yes. Preferred Residential Homes is licensed by the Arizona Department of Health Services (ADHS) as a Behavioral Health Residential Facility. License #BHRF2015, effective April 1, 2026, expiring March 31, 2027.</p></div>
+      <div class="faq-card"><h4>Do you accept DCS / DCFS referrals?</h4><p>Yes, we work with DCS caseworkers and other referral sources. Please use our intake form or contact us directly to begin the referral process.</p></div>
+      <div class="faq-card"><h4>What happens after I submit the intake form?</h4><p>Our team reviews your submission and contacts you within 1 business day to discuss the child's needs, our availability, and next steps together.</p></div>
+    </div>
+  </div>
+</section>
+<section data-section="cta" id="intake-cta" aria-labelledby="cta-heading">
+  <div class="intake-cta-inner">
+    <div class="intake-cta-text"><div class="intake-cta-label">Take the First Step</div><h2 id="cta-heading">Ready to Begin the Intake Process?</h2><p>Our intake form is quick, confidential, and designed to get the right information to our team so we can help as efficiently as possible.</p></div>
+    <div class="intake-cta-actions"><a href="https://preferredrh.com/intake.html" class="btn-white">Start Intake Now &rarr;</a><p class="intake-cta-phone">Questions? Call <a href="tel:6233852064">(623) 385-2064</a></p></div>
+  </div>
+</section>
+</main>
+<footer data-section="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="https://preferredrh.com/" class="nav-logo"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.08)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.8"/><path d="M28 11L11 24L45 24L28 11Z" fill="white" opacity="0.9"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/></svg><span class="nav-logo-text">Preferred Residential Homes</span></a>
+        <p class="footer-tagline">Providing safe, structured, and nurturing behavioral residential care for children and youth &mdash; one child at a time.</p>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="https://preferredrh.com/">Home</a></li><li><a href="https://preferredrh.com/about.html">About Us</a></li><li><a href="https://preferredrh.com/services.html">Services</a></li><li><a href="https://preferredrh.com/intake.html">Start Intake</a></li><li><a href="https://preferredrh.com/contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://preferredrh.com/services.html#behavioral">Behavioral Residential</a></li><li><a href="https://preferredrh.com/services.html#youth">Youth Support</a></li><li><a href="https://preferredrh.com/services.html#family">Family-Centered Care</a></li><li><a href="https://preferredrh.com/services.html#daily-living">Daily Living</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6233852064">(623) 385-2064</a></li><li><a href="mailto:info@preferredrh.com">info@preferredrh.com</a></li><li><a href="mailto:intake@preferredrh.com">intake@preferredrh.com</a></li><li><a href="https://preferredrh.com/contact.html">Send a Message</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Preferred Residential Homes, LLC. All rights reserved.</p><p class="footer-legal" style="color:rgba(255,255,255,0.2)">AZ License #BHRF2015</p></div>
+  </div>
+</footer>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" style="position:fixed;bottom:32px;right:32px;z-index:998;width:48px;height:48px;border-radius:50%;background:#27AE60;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(39,174,96,.45);display:none;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="18,15 12,9 6,15"/></svg></button>
+<script>
+const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const btn=document.getElementById('hamburgerBtn'),menu=document.getElementById('mobileMenu');
+btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}));
+document.querySelectorAll('input,select,textarea').forEach(el=>{el.addEventListener('input',()=>{el.classList.remove('error');const err=document.getElementById(el.id+'-err');if(err)err.classList.remove('show');});});
+function validate(fields){let valid=true;fields.forEach(id=>{const el=document.getElementById(id),err=document.getElementById(id+'-err');if(!el)return;if(!el.value.trim()){el.classList.add('error');if(err)err.classList.add('show');valid=false;}});return valid;}
+document.getElementById('contactSubmit').addEventListener('click',async()=>{
+  if(!validate(['cName','cEmail','cSubject','cMessage']))return;
+  const submitBtn=document.getElementById('contactSubmit');submitBtn.disabled=true;submitBtn.innerHTML='Sending...';
+  const payload={contactName:document.getElementById('cName').value.trim(),contactPhone:document.getElementById('cPhone').value.trim(),contactEmail:document.getElementById('cEmail').value.trim(),data:{subject:document.getElementById('cSubject').value,message:document.getElementById('cMessage').value.trim(),source:'Contact Form',submittedAt:new Date().toLocaleString('en-US',{timeZone:'America/Phoenix'})}};
+  try{await fetch('https://paymegpt.com/api/webhook/flow/2509',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),mode:'no-cors'});}catch(e){console.warn('Webhook:',e);}
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('contactSuccess').style.display='block';
+});
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
