@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/prh-web/services/">
+<!-- BASE:END -->
+
+<base href="https://preferredrh.com/">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="canonical" href="https://preferredrh.com/services/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777411134258-4b14bc4fd4a977d4.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Our Services | Preferred Residential Homes</title>
+<meta name="description" content="Explore the full range of behavioral residential care services offered by Preferred Residential Homes in Tolleson, AZ." />
+<meta property="og:title" content="Our Services | Preferred Residential Homes" />
+<meta property="og:description" content="Explore the full range of behavioral residential care services offered by Preferred Residential Homes in Tolleson, AZ." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Our Services | Preferred Residential Homes" />
+<meta name="twitter:description" content="Explore the full range of behavioral residential care services offered by Preferred Residential Homes in Tolleson, AZ." />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.calldirector.ai/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4315');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='ZUzRTkw';
+  var apiBase='https://app.calldirector.ai';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <a href="https://preferredrh.com/" class="nav-logo" aria-label="Preferred Residential Homes Home">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.18)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.95"/><path d="M28 11L11 24L45 24L28 11Z" fill="white"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><rect x="14" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><rect x="36" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/><path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.7"/></svg>
+    <span class="nav-logo-text">Preferred Residential Homes</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://preferredrh.com/services/" class="active">Services</a></li>
+    <li><a href="https://preferredrh.com/about/">About Us</a></li>
+    <li><a href="https://preferredrh.com/contact/">Contact</a></li>
+    <li><a href="https://preferredrh.com/intake/" class="nav-cta">Start Intake</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://preferredrh.com/services/">Services</a>
+  <a href="https://preferredrh.com/about/">About Us</a>
+  <a href="https://preferredrh.com/contact/">Contact</a>
+  <a href="https://preferredrh.com/intake/" class="nav-cta">Start Intake Process</a>
+</div>
+<main>
+<section id="page-hero" aria-label="Services page hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-breadcrumb"><a href="https://preferredrh.com/">Home</a> &rsaquo; Services</div>
+    <h1>Our Services</h1>
+    <p>Every service we offer is designed around one purpose &mdash; giving children and youth in behavioral residential care the structure, compassion, and individualized support they need to heal, grow, and thrive.</p>
+  </div>
+</section>
+<nav id="services-nav" aria-label="Services quick navigation">
+  <div class="services-nav-inner">
+    <a href="https://preferredrh.com/services/#behavioral">Behavioral Residential</a>
+    <a href="https://preferredrh.com/services/#youth">Youth Support</a>
+    <a href="https://preferredrh.com/services/#family">Family-Centered Care</a>
+    <a href="https://preferredrh.com/services/#daily-living">Daily Living</a>
+    <a href="https://preferredrh.com/services/#development">Development Planning</a>
+    <a href="https://preferredrh.com/services/#placement">Safe Placement</a>
+    <a href="https://preferredrh.com/services/#intake-screening">Intake &amp; Screening</a>
+  </div>
+</nav>
+<section id="behavioral" class="service-section" aria-labelledby="behavioral-heading">
+  <div class="service-inner">
+    <div class="service-img"><img class="service-photo" src="https://app.calldirector.ai/objects/generated-images/218/1777411171895-01680a406d390e92.png" alt="A caring staff member meeting one-on-one with a teenager" loading="eager"></div>
+    <div class="service-text">
+      <span class="section-label">Behavioral Residential Services</span>
+      <h2 class="section-title" id="behavioral-heading">Structured Residential Care for Behavioral Health</h2>
+      <p>Our core service provides safe, structured residential placements for children and youth who require intensive behavioral health support. We create a home-like environment grounded in therapeutic principles, where every child receives consistent, compassionate care around the clock.</p>
+      <ul class="service-bullets">
+        <li>24/7 staffed residential environment with trained behavioral health professionals</li>
+        <li>Individualized behavioral support plans developed for each child</li>
+        <li>Regular coordination with caseworkers, therapists, and families</li>
+        <li>Safe, structured routines that promote stability and predictability</li>
+        <li>Licensed by the Arizona Department of Health Services (License #BHRF2015)</li>
+      </ul>
+      <p class="service-note">We are licensed to provide behavioral health residential facility services in the State of Arizona under Title 36, Chapter 4 of the Arizona Revised Statutes.</p>
+      <a href="https://preferredrh.com/intake/" class="btn-primary">Start Intake Process &rarr;</a>
+    </div>
+  </div>
+</section>
+<section id="youth" class="service-section" style="background:var(--warm)" aria-labelledby="youth-heading">
+  <div class="service-inner">
+    <div class="service-text">
+      <span class="section-label">Youth Support Programs</span>
+      <h2 class="section-title" id="youth-heading">Tailored Programs for Children &amp; Adolescents</h2>
+      <p>Every child in our care participates in structured youth support programming designed to meet them where they are &mdash; emotionally, developmentally, and socially.</p>
+      <ul class="service-bullets">
+        <li>Emotional regulation and coping skills development</li>
+        <li>Social skills training through structured group activities</li>
+        <li>Academic support and homework assistance</li>
+        <li>Positive behavioral reinforcement strategies</li>
+        <li>Age-appropriate recreation, creativity, and physical activity</li>
+        <li>Therapeutic programming in coordination with clinical providers</li>
+      </ul>
+      <a href="https://preferredrh.com/intake/" class="btn-primary">Start Intake Process &rarr;</a>
+    </div>
+    <div class="service-img"><img class="service-photo" src="https://app.calldirector.ai/objects/generated-images/218/1777411202604-92c0ef83d3724389.png" alt="Diverse group of children in a structured group activity" loading="lazy"></div>
+  </div>
+</section>
+<section id="family" class="service-section" aria-labelledby="family-heading">
+  <div class="service-inner">
+    <div class="service-img"><img class="service-photo" src="https://app.calldirector.ai/objects/generated-images/218/1777411231149-5907c72d95bd353f.png" alt="A warm family reunification moment with a parent, child, and staff member" loading="lazy"></div>
+    <div class="service-text">
+      <span class="section-label">Family-Centered Care</span>
+      <h2 class="section-title" id="family-heading">Keeping Families Connected Every Step of the Way</h2>
+      <p>We believe family involvement is not optional &mdash; it's essential. Maintaining and rebuilding family relationships is a core part of every child's healing journey.</p>
+      <ul class="service-bullets">
+        <li>Regular family communication and scheduled updates on child's progress</li>
+        <li>Family visitation planning and coordination</li>
+        <li>Parent and guardian involvement in care plan development and reviews</li>
+        <li>Connection to community resources and wraparound support services</li>
+        <li>Transition planning for family reunification when appropriate</li>
+        <li>Culturally sensitive and trauma-informed approach to family engagement</li>
+      </ul>
+      <a href="https://preferredrh.com/intake/" class="btn-primary">Start Intake Process &rarr;</a>
+    </div>
+  </div>
+</section>
+<section id="daily-living" class="service-section" style="background:var(--warm)" aria-labelledby="daily-heading">
+  <div class="service-inner">
+    <div class="service-text">
+      <span class="section-label">Structured Daily Living Support</span>
+      <h2 class="section-title" id="daily-heading">Building Independence Through Daily Structure</h2>
+      <p>Structure isn't a restriction &mdash; it's a foundation. Our structured daily living program teaches children the routines, responsibilities, and life skills they need to function independently.</p>
+      <ul class="service-bullets">
+        <li>Consistent daily schedules covering morning, afternoon, and evening routines</li>
+        <li>Meal planning, preparation, and nutrition education</li>
+        <li>Household responsibilities appropriate to age and ability</li>
+        <li>Personal hygiene and self-care skill development</li>
+        <li>Money management and community living basics for older youth</li>
+        <li>Time management and organizational skills</li>
+      </ul>
+      <a href="https://preferredrh.com/intake/" class="btn-primary">Start Intake Process &rarr;</a>
+    </div>
+    <div class="service-img"><img class="service-photo" src="https://app.calldirector.ai/objects/generated-images/218/1777411262966-442e1cceaef2cfb9.png" alt="A teenager learning daily life skills with adult staff support" loading="lazy"></div>
+  </div>
+</section>
+<section id="development" class="service-section" aria-labelledby="dev-heading">
+  <div class="service-inner">
+    <div class="service-img"><img class="service-photo" src="https://app.calldirector.ai/objects/generated-images/218/1777411293586-a15c0f39dbde7784.png" alt="A counselor and teenager reviewing a personal goals board" loading="lazy"></div>
+    <div class="service-text">
+      <span class="section-label">Individual Development Planning</span>
+      <h2 class="section-title" id="dev-heading">A Personalized Roadmap for Every Child</h2>
+      <p>No two children are the same, and no two development plans should be either. We create individualized development plans in collaboration with the child, their family, and their treatment team.</p>
+      <ul class="service-bullets">
+        <li>Comprehensive intake assessment to understand each child's strengths and needs</li>
+        <li>Collaborative goal-setting with child, family, and caseworker</li>
+        <li>Academic and vocational goal tracking</li>
+        <li>Social-emotional development benchmarks</li>
+        <li>Regular plan reviews and updates based on progress</li>
+        <li>Documentation and reporting for placement agencies and courts</li>
+      </ul>
+      <a href="https://preferredrh.com/intake/" class="btn-primary">Start Intake Process &rarr;</a>
+    </div>
+  </div>
+</section>
+<section id="placement" class="service-section" style="background:var(--warm)" aria-labelledby="placement-heading">
+  <div class="service-inner">
+    <div class="service-text">
+      <span class="section-label">Safe Residential Placement</span>
+      <h2 class="section-title" id="placement-heading">A Secure, Stable Home When Children Need It Most</h2>
+      <p>When a child needs a safe place to land, we are here. Our residential placement service provides an immediate, stable, and secure living environment staffed around the clock by caring professionals.</p>
+      <ul class="service-bullets">
+        <li>Immediate placement coordination with referral agencies and caseworkers</li>
+        <li>Clean, comfortable, fully furnished private and semi-private rooms</li>
+        <li>Secure, monitored environment with clearly defined safety protocols</li>
+        <li>Trained staff on-site 24 hours a day, 7 days a week</li>
+        <li>Emergency placement options available &mdash; contact us for availability</li>
+        <li>Regular communication with placing agencies throughout the placement</li>
+      </ul>
+      <p class="service-note">Current licensed capacity: 5 residents. Contact us to confirm current availability.</p>
+      <a href="https://preferredrh.com/intake/" class="btn-primary">Start Intake Process &rarr;</a>
+    </div>
+    <div class="service-img"><img class="service-photo" src="https://app.calldirector.ai/objects/generated-images/218/1777411322306-1812524f68a4bc54.png" alt="A child being warmly welcomed into a safe furnished bedroom" loading="lazy"></div>
+  </div>
+</section>
+<section id="intake-screening" class="service-section" aria-labelledby="intake-screening-heading">
+  <div class="service-inner">
+    <div class="service-text">
+      <span class="section-label">Intake &amp; Screening</span>
+      <h2 class="section-title" id="intake-screening-heading">Our Intake &amp; Screening Process</h2>
+      <p>We've designed our intake process to be as clear, respectful, and efficient as possible &mdash; for families, caseworkers, and referral sources alike.</p>
+      <ul class="service-bullets">
+        <li>Submit your inquiry online or call us directly at (623) 385-2064</li>
+        <li>A team member reviews your submission within 1 business day</li>
+        <li>We conduct an initial screening call to assess fit and availability</li>
+        <li>Documentation review: referral docs, assessments, and history</li>
+        <li>Placement decision made in coordination with all parties</li>
+        <li>Welcome and transition support provided on arrival</li>
+      </ul>
+      <a href="https://preferredrh.com/intake/" class="btn-primary">Begin Intake Now &rarr;</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--warm-dark);display:flex;gap:20px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:white">1</span></div><div><strong style="display:block;font-size:.95rem;color:var(--text-dark);margin-bottom:4px">Submit Your Inquiry</strong><p style="font-size:.87rem;color:var(--text-mid);line-height:1.6">Complete our 3-step online intake form or call (623) 385-2064. Provide as much detail as you're comfortable sharing.</p></div></div>
+      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--warm-dark);display:flex;gap:20px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--primary-light);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:white">2</span></div><div><strong style="display:block;font-size:.95rem;color:var(--text-dark);margin-bottom:4px">We Review &amp; Reach Out</strong><p style="font-size:.87rem;color:var(--text-mid);line-height:1.6">Our intake team contacts you within 1 business day to discuss the child's needs and our availability.</p></div></div>
+      <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--warm-dark);display:flex;gap:20px;align-items:flex-start"><div style="width:44px;height:44px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:white">3</span></div><div><strong style="display:block;font-size:.95rem;color:var(--text-dark);margin-bottom:4px">Placement &amp; Welcome</strong><p style="font-size:.87rem;color:var(--text-mid);line-height:1.6">Once approved, we coordinate placement and provide a warm, structured welcome from day one.</p></div></div>
+    </div>
+  </div>
+</section>
+<section id="intake-cta" aria-labelledby="cta-heading">
+  <div class="intake-cta-inner">
+    <div class="intake-cta-text"><div class="intake-cta-label">Take the First Step</div><h2 id="cta-heading">Ready to Begin the Intake Process?</h2><p>Whether you're a parent, guardian, caseworker, or referring professional &mdash; we're here to help. Our intake process is straightforward and confidential.</p></div>
+    <div class="intake-cta-actions"><a href="https://preferredrh.com/intake/" class="btn-white">Start Intake Now &rarr;</a><p class="intake-cta-phone">Questions? Call <a href="tel:6233852064">(623) 385-2064</a></p></div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="https://preferredrh.com/" class="nav-logo"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.08)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.8"/><path d="M28 11L11 24L45 24L28 11Z" fill="white" opacity="0.9"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/></svg><span class="nav-logo-text">Preferred Residential Homes</span></a>
+        <p class="footer-tagline">Providing safe, structured, and nurturing behavioral residential care for children and youth &mdash; one child at a time.</p>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="https://preferredrh.com/">Home</a></li><li><a href="https://preferredrh.com/about/">About Us</a></li><li><a href="https://preferredrh.com/services/">Services</a></li><li><a href="https://preferredrh.com/intake/">Start Intake</a></li><li><a href="https://preferredrh.com/contact/">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://preferredrh.com/services/#behavioral">Behavioral Residential</a></li><li><a href="https://preferredrh.com/services/#youth">Youth Support</a></li><li><a href="https://preferredrh.com/services/#family">Family-Centered Care</a></li><li><a href="https://preferredrh.com/services/#daily-living">Daily Living</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6233852064">(623) 385-2064</a></li><li><a href="mailto:info@preferredrh.com">info@preferredrh.com</a></li><li><a href="https://preferredrh.com/contact/">Send a Message</a></li><li><a href="https://preferredrh.com/intake/">Begin Intake</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Preferred Residential Homes, LLC. All rights reserved.</p><p class="footer-legal" style="color:rgba(255,255,255,0.2)">AZ License #BHRF2015</p></div>
+  </div>
+</footer>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="18,15 12,9 6,15"/></svg>
+</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
