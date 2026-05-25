@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/prh-web/intake/">
+<!-- BASE:END -->
+
+<base href="https://preferredrh.com/">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="canonical" href="https://preferredrh.com/intake.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777413642596-fe0bd4f3e94397cc.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Start Intake | Preferred Residential Homes</title>
+<meta name="description" content="Begin the intake process for behavioral residential care at Preferred Residential Homes in Tolleson, AZ. Confidential, simple, and respectful." />
+<meta property="og:title" content="Start Intake | Preferred Residential Homes" />
+<meta property="og:description" content="Begin the intake process for behavioral residential care at Preferred Residential Homes in Tolleson, AZ. Confidential, simple, and respectful." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Start Intake | Preferred Residential Homes" />
+<meta name="twitter:description" content="Begin the intake process for behavioral residential care at Preferred Residential Homes in Tolleson, AZ. Confidential, simple, and respectful." />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.calldirector.ai/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4317');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='5qdMkqjv';
+  var apiBase='https://app.calldirector.ai';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="mainNav" role="navigation" aria-label="Main navigation" data-section="navbar">
+  <a href="https://preferredrh.com/" class="nav-logo" aria-label="Preferred Residential Homes Home">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.18)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.95"/><path d="M28 11L11 24L45 24L28 11Z" fill="white"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><rect x="14" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><rect x="36" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/><path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.7"/></svg>
+    <span class="nav-logo-text">Preferred Residential Homes</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://preferredrh.com/services.html">Services</a></li>
+    <li><a href="https://preferredrh.com/about.html">About Us</a></li><li><a href="https://preferredrh.com/contact.html">Contact</a></li>
+    <li><a href="https://preferredrh.com/intake.html" class="nav-cta">Start Intake</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu" data-section="mobile-menu">
+  <a href="https://preferredrh.com/services.html">Services</a><a href="https://preferredrh.com/about.html">About Us</a><a href="https://preferredrh.com/contact.html">Contact</a>
+  <a href="https://preferredrh.com/intake.html" class="nav-cta">Start Intake Process</a>
+</div>
+<main>
+<section id="page-hero" aria-label="Intake page hero" data-section="hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-breadcrumb"><a href="https://preferredrh.com/index.html">Home</a> &rsaquo; Start Intake</div>
+    <h1>Begin the Intake Process</h1>
+    <p>Your information is secure and confidential. Complete all three steps and a member of our team will reach out within 1 business day.</p>
+  </div>
+</section>
+<section id="intake-portal" aria-label="Intake form" data-section="intake-portal">
+  <div class="portal-layout">
+    <div>
+      <div style="margin-bottom:40px">
+        <div class="progress-steps" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3">
+          <div class="step-item active" id="si1"><div class="step-circle" id="sc1">1</div><span class="step-label">Contact Info</span></div>
+          <div class="step-item" id="si2"><div class="step-circle" id="sc2">2</div><span class="step-label">Child &amp; Reason</span></div>
+          <div class="step-item" id="si3"><div class="step-circle" id="sc3">3</div><span class="step-label">Additional Info</span></div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div id="form-step-1" class="form-step active">
+          <div class="form-card-header"><h2>Your Contact Information</h2><p>Tell us how to reach you. All information is kept strictly confidential.</p></div>
+          <div class="form-card-body">
+            <div class="form-row">
+              <div class="form-group"><label for="fullName">Full Name <span class="req">*</span></label><input type="text" id="fullName" placeholder="Your full name" autocomplete="name"><span class="error-msg" id="fullName-err">Please enter your full name.</span></div>
+              <div class="form-group"><label for="relationship">Relationship to Child <span class="req">*</span></label><select id="relationship"><option value="">Select relationship...</option><option>Parent</option><option>Guardian</option><option>Caseworker</option><option>Referral Source</option><option>DCS / DCFS Worker</option><option>Therapist / Clinician</option><option>Self</option><option>Other</option></select><span class="error-msg" id="relationship-err">Please select your relationship.</span></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="phone">Phone Number <span class="req">*</span></label><input type="tel" id="phone" placeholder="(XXX) XXX-XXXX" autocomplete="tel"><span class="error-msg" id="phone-err">Please enter a valid phone number.</span></div>
+              <div class="form-group"><label for="email">Email Address <span class="req">*</span></label><input type="email" id="email" placeholder="your@email.com" autocomplete="email"><span class="error-msg" id="email-err">Please enter a valid email address.</span></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Preferred Contact Method <span class="req">*</span></label><div class="radio-group"><label class="radio-option"><input type="radio" name="contactMethod" value="Phone" checked> Phone</label><label class="radio-option"><input type="radio" name="contactMethod" value="Email"> Email</label><label class="radio-option"><input type="radio" name="contactMethod" value="Either"> Either</label></div></div>
+              <div class="form-group"><label for="bestTime">Best Time to Reach You</label><select id="bestTime"><option value="">Select time...</option><option>Morning (8AM–12PM)</option><option>Afternoon (12PM–4PM)</option><option>Evening (4PM–7PM)</option><option>Anytime</option></select></div>
+            </div>
+            <div class="form-actions"><span></span><div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px"><button class="btn-next" id="next-1" type="button">Next: Child &amp; Reason &rsaquo;</button><div class="security-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Your information is secure &amp; confidential</div></div></div>
+          </div>
+        </div>
+        <div id="form-step-2" class="form-step">
+          <div class="form-card-header"><h2>Child &amp; Reason for Inquiry</h2><p>Help us understand the child's situation so we can provide the most appropriate support.</p></div>
+          <div class="form-card-body">
+            <div class="form-row">
+              <div class="form-group"><label for="childName">Child's First Name <span class="req">*</span></label><input type="text" id="childName" placeholder="Child's first name"><span class="error-msg" id="childName-err">Please enter the child's first name.</span></div>
+              <div class="form-group"><label for="childAge">Child's Age</label><input type="number" id="childAge" placeholder="Age in years" min="5" max="17"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="childDOB">Date of Birth</label><input type="date" id="childDOB"></div>
+              <div class="form-group"><label for="childGender">Gender</label><select id="childGender"><option value="">Select...</option><option>Male</option><option>Female</option><option>Non-binary</option><option>Prefer not to say</option></select></div>
+            </div>
+            <div class="form-row full"><div class="form-group"><label for="reasonInquiry">Reason for Inquiry <span class="req">*</span></label><textarea id="reasonInquiry" placeholder="Please describe the child's current situation and what behavioral or residential support you are seeking..." rows="4"></textarea><span class="error-msg" id="reasonInquiry-err">Please describe the reason for your inquiry.</span></div></div>
+            <div class="form-row">
+              <div class="form-group"><label for="livingSituation">Current Living Situation</label><select id="livingSituation"><option value="">Select...</option><option>With parent(s)/guardian(s)</option><option>In foster care</option><option>In group home / residential facility</option><option>Homeless / unstable housing</option><option>With other relatives</option><option>Other</option></select></div>
+              <div class="form-group"><label for="urgency">Urgency Level <span class="req">*</span></label><select id="urgency"><option value="">Select urgency...</option><option>General Inquiry / Exploring Options</option><option>Within 30 Days</option><option>Within 2 Weeks</option><option>Within 1 Week</option><option>Urgent — Immediate Need</option></select><span class="error-msg" id="urgency-err">Please select an urgency level.</span></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="priorServices">Prior Behavioral Services?</label><select id="priorServices"><option value="">Select...</option><option>Yes</option><option>No</option><option>Unknown</option></select></div>
+              <div class="form-group"><label for="medications">Current Medications</label><input type="text" id="medications" placeholder="List any current medications or 'None'"></div>
+            </div>
+            <div class="form-row full"><div class="form-group"><label for="priorServicesDetail">If yes to prior services, describe briefly</label><textarea id="priorServicesDetail" placeholder="Optional — describe prior behavioral health services received..." rows="3"></textarea></div></div>
+            <div class="form-actions"><button class="btn-back" id="back-2" type="button">&lsaquo; Back</button><div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px"><button class="btn-next" id="next-2" type="button">Next: Additional Info &rsaquo;</button><div class="security-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Your information is secure &amp; confidential</div></div></div>
+          </div>
+        </div>
+        <div id="form-step-3" class="form-step">
+          <div class="form-card-header"><h2>Additional Information</h2><p>Almost done. Any extra context helps us prepare for our initial conversation with you.</p></div>
+          <div class="form-card-body">
+            <div class="form-row full"><div class="form-group"><label for="additionalNotes">Additional Notes</label><textarea id="additionalNotes" placeholder="Anything else we should know — diagnoses, behaviors, special needs, preferences, etc." rows="4"></textarea></div></div>
+            <div class="form-row full">
+              <div class="form-group">
+                <label>Supporting Documents <span style="font-weight:400;color:var(--text-light)">(Optional)</span></label>
+                <div class="file-upload-area" id="fileDropZone" role="button" tabindex="0">
+                  <input type="file" id="fileUpload" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple>
+                  <div class="file-upload-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+                  <strong>Click to upload or drag &amp; drop</strong>
+                  <p>Referral documents, assessments, court orders, psychological evaluations</p>
+                  <p style="font-size:.76rem;margin-top:4px">PDF, DOC, DOCX, JPG, PNG — Max 10MB per file</p>
+                  <div class="file-name" id="fileName"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="heardAboutUs">How did you hear about us?</label><select id="heardAboutUs"><option value="">Select...</option><option>DCS / DCFS Referral</option><option>Caseworker Referral</option><option>Google Search</option><option>Social Media</option><option>Word of Mouth</option><option>Community Organization</option><option>Other</option></select></div>
+              <div class="form-group"><label>&nbsp;</label><div style="background:var(--accent-soft);border-radius:var(--radius);padding:14px 16px;font-size:.82rem;color:var(--text-mid);line-height:1.6;border:1px solid var(--accent-light)"><strong style="color:var(--primary);display:block;margin-bottom:4px">Response Time</strong>We review all submissions within 1 business day and will contact you via your preferred method.</div></div>
+            </div>
+            <div class="form-row full" style="margin-top:8px">
+              <div class="form-group">
+                <label>Consent &amp; Confirmation <span class="req">*</span></label>
+                <div class="consent-wrap"><input type="checkbox" id="consent"><span class="consent-text">I confirm that the information provided is accurate to the best of my knowledge, and I consent to being contacted by Preferred Residential Homes regarding this inquiry. I understand that submitting this form does not guarantee placement and all information will be kept confidential.</span></div>
+                <span class="error-msg" id="consent-err">You must confirm and consent to continue.</span>
+              </div>
+            </div>
+            <div class="form-actions"><button class="btn-back" id="back-3" type="button">&lsaquo; Back</button><div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px"><button class="btn-submit" id="submitBtn" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>Submit Intake Form</button><div class="security-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Sent securely to intake@preferredrh.com</div></div></div>
+          </div>
+        </div>
+        <div id="confirmation">
+          <div class="confirm-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2.5" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div>
+          <h2 class="confirm-title">Intake Submitted Successfully</h2>
+          <p class="confirm-subtitle">Thank you for reaching out to Preferred Residential Homes. Your submission has been received and sent to our intake team. Here's what happens next:</p>
+          <div class="confirm-steps">
+            <div class="confirm-step"><div class="confirm-step-num" style="background:var(--primary)">1</div><div class="confirm-step-text"><strong>We Review Your Submission</strong><span>Our intake team reviews your information, typically within 1 business day.</span></div></div>
+            <div class="confirm-step"><div class="confirm-step-num" style="background:var(--primary-light)">2</div><div class="confirm-step-text"><strong>A Team Member Contacts You</strong><span>We'll reach out via your preferred contact method to discuss the child's needs and our availability.</span></div></div>
+            <div class="confirm-step"><div class="confirm-step-num" style="background:var(--accent)">3</div><div class="confirm-step-text"><strong>We Begin the Intake Process</strong><span>If there's a fit, we'll coordinate next steps, documentation, and placement together.</span></div></div>
+          </div>
+          <div class="confirm-urgent"><strong>Have an urgent need?</strong> Call us directly at <a href="tel:6233852064">(623) 385-2064</a></div>
+        </div>
+      </div>
+    </div>
+    <aside class="sidebar">
+      <div class="sidebar-card"><h4>Need Help?</h4><p>Our team is available Monday–Friday, 9AM–5PM to answer questions.</p><p><a href="tel:6233852064">(623) 385-2064</a></p><p><a href="mailto:intake@preferredrh.com">intake@preferredrh.com</a></p></div>
+      <div class="sidebar-card"><h4>What to Expect</h4><p>This form takes about <strong>5–10 minutes</strong> to complete.</p><div class="sidebar-divider"></div><p>✓ Your contact information</p><p>✓ The child's basic background</p><p>✓ Reason for inquiry &amp; urgency</p><p>✓ Any supporting documents</p><div class="sidebar-divider"></div><p>You do not need every answer &mdash; provide what you can and we'll discuss the rest.</p></div>
+      <div class="sidebar-card" style="background:var(--accent-soft);border:1px solid var(--accent-light)"><h4 style="color:var(--primary)">Confidentiality</h4><p>All information submitted through this form is treated as strictly confidential and used only for evaluating placement appropriateness.</p></div>
+      <div class="sidebar-card" style="background:var(--primary);color:white"><h4 style="color:white">Our Location</h4><p style="color:rgba(255,255,255,0.8)">4050 S 94th Ln<br>Tolleson, AZ 85353</p><div class="sidebar-divider" style="background:rgba(255,255,255,0.15)"></div><p style="color:rgba(255,255,255,0.8)">AZ ADHS License #BHRF2015<br>Capacity: 5 Residents</p></div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer data-section="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="https://preferredrh.com/" class="nav-logo"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.08)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.8"/><path d="M28 11L11 24L45 24L28 11Z" fill="white" opacity="0.9"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/></svg><span class="nav-logo-text">Preferred Residential Homes</span></a>
+        <p class="footer-tagline">Providing safe, structured, and nurturing behavioral residential care for children and youth &mdash; one child at a time.</p>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="https://preferredrh.com/index.html">Home</a></li><li><a href="https://preferredrh.com/about.html">About Us</a></li><li><a href="https://preferredrh.com/services.html">Services</a></li><li><a href="https://preferredrh.com/intake.html">Start Intake</a></li><li><a href="https://preferredrh.com/contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://preferredrh.com/services.html#behavioral">Behavioral Residential</a></li><li><a href="https://preferredrh.com/services.html#youth">Youth Support</a></li><li><a href="https://preferredrh.com/services.html#family">Family-Centered Care</a></li><li><a href="https://preferredrh.com/services.html#daily-living">Daily Living</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6233852064">(623) 385-2064</a></li><li><a href="mailto:intake@preferredrh.com">intake@preferredrh.com</a></li><li><a href="https://preferredrh.com/contact.html">Send a Message</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Preferred Residential Homes, LLC. All rights reserved.</p><p class="footer-legal" style="color:rgba(255,255,255,0.2)">AZ License #BHRF2015</p></div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const btn=document.getElementById('hamburgerBtn'),menu=document.getElementById('mobileMenu');
+btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}));
+const fileInput=document.getElementById('fileUpload'),dropZone=document.getElementById('fileDropZone'),fileNameEl=document.getElementById('fileName');
+dropZone.addEventListener('click',()=>fileInput.click());dropZone.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')fileInput.click()});
+fileInput.addEventListener('change',()=>{if(fileInput.files.length){fileNameEl.textContent='Attached: '+Array.from(fileInput.files).map(f=>f.name).join(', ');}});
+let currentStep=1;
+function goToStep(n){
+  document.getElementById('form-step-'+currentStep).classList.remove('active');
+  document.getElementById('si'+currentStep).classList.remove('active');
+  if(n>currentStep){document.getElementById('si'+currentStep).classList.add('completed');document.getElementById('sc'+currentStep).innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg>';}
+  else{document.getElementById('si'+currentStep).classList.remove('completed');document.getElementById('sc'+currentStep).textContent=currentStep;}
+  currentStep=n;
+  document.getElementById('form-step-'+currentStep).classList.add('active');
+  document.getElementById('si'+currentStep).classList.add('active');
+  window.scrollTo({top:document.getElementById('intake-portal').offsetTop-100,behavior:'smooth'});
+}
+function validate(fields){
+  let valid=true;
+  fields.forEach(id=>{const el=document.getElementById(id),err=document.getElementById(id+'-err');if(!el)return;const val=el.type==='checkbox'?el.checked:el.value.trim();if(!val){el.classList.add('error');if(err)err.classList.add('show');valid=false;}else{el.classList.remove('error');if(err)err.classList.remove('show');}});
+  return valid;
+}
+document.querySelectorAll('input,select,textarea').forEach(el=>{el.addEventListener('input',()=>{el.classList.remove('error');const err=document.getElementById(el.id+'-err');if(err)err.classList.remove('show');});});
+document.getElementById('next-1').addEventListener('click',()=>{if(validate(['fullName','relationship','phone','email']))goToStep(2);});
+document.getElementById('back-2').addEventListener('click',()=>goToStep(1));
+document.getElementById('next-2').addEventListener('click',()=>{if(validate(['childName','urgency']))goToStep(3);});
+document.getElementById('back-3').addEventListener('click',()=>goToStep(2));
+document.getElementById('submitBtn').addEventListener('click',async()=>{
+  if(!validate(['consent']))return;
+  const submitBtn=document.getElementById('submitBtn');submitBtn.disabled=true;submitBtn.innerHTML='Submitting...';
+  const contactMethod=document.querySelector('input[name="contactMethod"]:checked')?.value||'Phone';
+  const payload={contactName:document.getElementById('fullName').value.trim(),contactPhone:document.getElementById('phone').value.trim(),contactEmail:document.getElementById('email').value.trim(),data:{relationship:document.getElementById('relationship').value,contactMethod,bestTime:document.getElementById('bestTime').value,childName:document.getElementById('childName').value.trim(),childAge:document.getElementById('childAge').value,childDOB:document.getElementById('childDOB').value,childGender:document.getElementById('childGender').value,reasonForInquiry:document.getElementById('reasonInquiry').value.trim(),livingSituation:document.getElementById('livingSituation').value,urgencyLevel:document.getElementById('urgency').value,priorServices:document.getElementById('priorServices').value,priorServicesDetail:document.getElementById('priorServicesDetail').value.trim(),medications:document.getElementById('medications').value.trim(),additionalNotes:document.getElementById('additionalNotes').value.trim(),heardAboutUs:document.getElementById('heardAboutUs').value,attachedFiles:fileInput.files.length?Array.from(fileInput.files).map(f=>f.name).join(', '):'None',submittedAt:new Date().toLocaleString('en-US',{timeZone:'America/Phoenix'})}};
+  try{await fetch('https://paymegpt.com/api/webhook/flow/2509',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),mode:'no-cors'});}catch(e){console.warn('Webhook:',e);}
+  document.getElementById('form-step-3').classList.remove('active');
+  document.getElementById('si3').classList.remove('active');document.getElementById('si3').classList.add('completed');
+  document.getElementById('sc3').innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg>';
+  document.getElementById('confirmation').style.display='block';
+  window.scrollTo({top:document.querySelector('.form-card').offsetTop-100,behavior:'smooth'});
+});
+</script>
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" style="position:fixed;bottom:32px;right:32px;z-index:998;width:48px;height:48px;border-radius:50%;background:#27AE60;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(39,174,96,.45);display:none;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="18,15 12,9 6,15"/></svg></button>  <script src="script.js"></script>
+</body>
+</html>
