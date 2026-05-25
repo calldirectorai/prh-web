@@ -1,229 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- BASE:START (managed by Coding Agent — do not edit) -->
-<base href="/prh-web/">
-<!-- BASE:END -->
-
-<base href="https://preferredrh.com/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-
+<title>Preferred Residential Homes | Safe Behavioral Residential Care for Children &amp; Youth</title>
+<meta name="description" content="Preferred Residential Homes provides safe, structured, and nurturing behavioral residential care for children and youth. Compassionate support designed to promote growth, stability, and a brighter future.">
+<meta property="og:title" content="Preferred Residential Homes | Behavioral Residential Care">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://preferredrh.com">
 <link rel="canonical" href="https://preferredrh.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777349574072-558806767ad1937d.png">
-<link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777410722181-afb3537c2bbf03f7.png">
-<link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777410755834-a7418d613a17cd73.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Preferred Residential Homes","url":"https://preferredrh.com","email":"info@preferredrh.com","telephone":"(623) 385-2064","address":{"@type":"PostalAddress","streetAddress":"4050 S 94th Ln","addressLocality":"Tolleson","addressRegion":"AZ","postalCode":"85353"},"serviceType":"Behavioral Residential Services","areaServed":"Arizona"}</script>
+<style>
+:root{
+  --primary:#1B4F72;--primary-light:#2E86C1;--primary-dark:#154360;
+  --accent:#27AE60;--accent-light:#A9DFBF;--accent-soft:#F0FBF4;
+  --warm:#F7F3EC;--warm-dark:#EDE8DC;
+  --text-dark:#1A1A2E;--text-mid:#4A5568;--text-light:#718096;
+  --white:#FFFFFF;
+  --shadow-sm:0 2px 12px rgba(27,79,114,.08);
+  --shadow:0 4px 24px rgba(27,79,114,.10);
+  --shadow-hover:0 8px 40px rgba(27,79,114,.18);
+  --shadow-lg:0 16px 64px rgba(27,79,114,.16);
+  --radius:12px;--radius-lg:20px;--radius-xl:32px;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --nav-height:80px;--max-width:1200px;
+  --transition:all .3s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text-dark);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* NAV */
+#mainNav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-height);display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:var(--transition);background:transparent}
+#mainNav.scrolled{background:var(--white);box-shadow:var(--shadow)}
+#mainNav.scrolled .nav-logo-text{color:var(--primary)}
+#mainNav.scrolled .nav-links a{color:var(--text-dark)}
+#mainNav.scrolled .nav-links a:hover{color:var(--primary-light)}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo-text{font-family:var(--font-display);font-size:1.12rem;font-weight:600;color:var(--white);line-height:1.2;transition:var(--transition);max-width:160px}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{font-size:.88rem;font-weight:500;color:rgba(255,255,255,.9);padding:8px 14px;border-radius:8px;transition:var(--transition)}
+.nav-links a:hover{background:rgba(255,255,255,.12)}
+.nav-links a.active{font-weight:600}
+.nav-links a.nav-cta{background:var(--accent);color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600;box-shadow:0 2px 12px rgba(39,174,96,.35)}
+.nav-links a.nav-cta:hover{background:#219a52;transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--white);padding:8px;border-radius:8px}
+#mainNav.scrolled .hamburger{color:var(--primary)}
+.mobile-menu{display:none;position:fixed;top:var(--nav-height);left:0;right:0;background:var(--white);box-shadow:var(--shadow-lg);padding:20px 24px;z-index:999;border-top:3px solid var(--accent)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:14px 0;font-size:1rem;font-weight:500;color:var(--text-dark);border-bottom:1px solid var(--warm-dark)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a.nav-cta{margin-top:16px;text-align:center;background:var(--accent);color:var(--white)!important;border-radius:50px;border-bottom:none;padding:14px;font-weight:600}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--white);font-family:var(--font-body);font-size:.95rem;font-weight:600;padding:16px 32px;border-radius:50px;border:none;cursor:pointer;transition:var(--transition);box-shadow:0 4px 20px rgba(39,174,96,.4)}
+.btn-primary:hover{background:#219a52;transform:translateY(-2px);box-shadow:0 8px 32px rgba(39,174,96,.5)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-family:var(--font-body);font-size:.95rem;font-weight:500;padding:16px 32px;border-radius:50px;border:1.5px solid rgba(255,255,255,.35);cursor:pointer;transition:var(--transition)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--primary);font-family:var(--font-body);font-size:1rem;font-weight:700;padding:18px 40px;border-radius:50px;border:none;cursor:pointer;transition:var(--transition);box-shadow:0 4px 24px rgba(0,0,0,.2);white-space:nowrap}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,0,0,.3)}
+.btn-blue{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:var(--white);font-family:var(--font-body);font-size:.95rem;font-weight:600;padding:16px 32px;border-radius:50px;border:none;cursor:pointer;transition:var(--transition)}
+.btn-blue:hover{background:var(--primary-dark);transform:translateY(-2px)}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:calc(var(--nav-height)+60px) 40px 80px;background:#0D2E4A}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle at 25px 25px,white 2px,transparent 2px),radial-gradient(circle at 75px 75px,white 2px,transparent 2px);background-size:100px 100px}
+.hero-content{position:relative;z-index:4;max-width:var(--max-width);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hero-left{max-width:580px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.4);color:#FFFFFF;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:50px;margin-bottom:28px}
+.hero-badge-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:700;color:#FFFFFF !important;line-height:1.15;margin-bottom:24px;letter-spacing:-.02em;text-shadow:0 2px 20px rgba(0,0,0,0.6),0 1px 4px rgba(0,0,0,0.8)}
+.hero-title em{font-style:italic;color:#A9DFBF !important;text-shadow:0 2px 20px rgba(0,0,0,0.5)}
+.hero-subtitle{font-size:1.1rem;color:#FFFFFF !important;line-height:1.75;margin-bottom:40px;font-weight:400;max-width:480px;text-shadow:0 1px 12px rgba(0,0,0,0.7)}
+.hero-cta-group{display:flex;gap:16px;flex-wrap:wrap}
+.hero-right{display:flex;justify-content:flex-end;align-items:center}
+
+/* TRUST BAR */
+#trust-bar{background:var(--white);border-bottom:1px solid var(--warm-dark);padding:0 40px}
+.trust-bar-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{display:flex;align-items:center;gap:16px;padding:28px 24px;border-right:1px solid var(--warm-dark);transition:var(--transition)}
+.trust-item:last-child{border-right:none}
+.trust-item:hover{background:var(--warm)}
+.trust-icon{width:48px;height:48px;background:var(--accent-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-text strong{display:block;font-size:.9rem;font-weight:600;color:var(--text-dark);margin-bottom:2px}
+.trust-text span{font-size:.78rem;color:var(--text-light)}
+
+/* SECTIONS */
+section{padding:96px 40px}
+.section-inner{max-width:var(--max-width);margin:0 auto}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.section-label::before{content:'';width:24px;height:2px;background:var(--accent);border-radius:2px}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:700;color:var(--text-dark);line-height:1.2;letter-spacing:-.02em}
+.section-subtitle{font-size:1.05rem;color:var(--text-mid);line-height:1.75;max-width:560px;margin-top:16px}
+.section-header{margin-bottom:56px}
+.section-header.center{text-align:center;display:flex;flex-direction:column;align-items:center}
+
+/* SERVICES */
+#services-overview{background:var(--warm)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid rgba(27,79,114,.06);transition:var(--transition)}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.service-card-art{width:100%;display:block}
+.service-card-body{padding:28px 28px 24px}
+.service-card h3{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--text-dark);margin-bottom:10px;line-height:1.3}
+.service-card p{font-size:.88rem;color:var(--text-mid);line-height:1.7;margin-bottom:18px}
+.service-card-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--primary-light);transition:var(--transition)}
+.service-card-link:hover{gap:10px;color:var(--primary)}
+
+/* WHY US */
+#why-us{background:var(--white)}
+.why-us-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-feature{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-bottom:1px solid var(--warm-dark)}
+.why-feature:last-child{border-bottom:none}
+.why-feature-check{width:28px;height:28px;background:var(--accent-soft);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.why-feature-text strong{display:block;font-size:.95rem;font-weight:600;color:var(--text-dark);margin-bottom:4px}
+.why-feature-text p{font-size:.87rem;color:var(--text-mid);line-height:1.6}
+
+/* MISSION */
+#mission-snapshot{background:var(--warm)}
+.mission-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.mission-quote-wrap{position:relative;overflow:hidden;padding:48px;background:var(--white);border-radius:var(--radius-xl);box-shadow:var(--shadow)}
+.mission-quote-mark{font-family:var(--font-display);font-size:8rem;line-height:.6;color:var(--accent-light);margin-bottom:24px;display:block}
+.mission-quote-text{font-family:var(--font-display);font-size:1.45rem;font-style:italic;color:var(--text-dark);line-height:1.55;margin-bottom:28px}
+.mission-quote-attr{display:flex;align-items:center;gap:14px}
+.mission-quote-line{width:32px;height:2px;background:var(--accent)}
+.mission-quote-attr span{font-size:.85rem;font-weight:600;color:var(--primary)}
+.mission-right p{font-size:1rem;color:var(--text-mid);line-height:1.8;margin-bottom:16px}
+.mission-values{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.mission-value-chip{display:flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--warm-dark);border-radius:50px;padding:10px 16px;font-size:.85rem;font-weight:500;color:var(--text-dark)}
+.mission-value-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+/* INTAKE CTA */
+#intake-cta{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 50%,#1A6EA8 100%);padding:80px 40px;position:relative;overflow:hidden}
+#intake-cta::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,.03);top:-200px;right:-100px}
+.intake-cta-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;position:relative;z-index:1}
+.intake-cta-text h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.6rem);color:var(--white);font-weight:700;line-height:1.2;margin-bottom:16px}
+.intake-cta-text p{font-size:1rem;color:rgba(255,255,255,.72);max-width:480px;line-height:1.7}
+.intake-cta-actions{display:flex;flex-direction:column;gap:12px;align-items:flex-end;flex-shrink:0}
+.intake-cta-phone{color:rgba(255,255,255,.65);font-size:.88rem;text-align:center}
+.intake-cta-phone a{color:rgba(255,255,255,.9);font-weight:600}
+.intake-cta-label{color:var(--accent-light);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.intake-cta-label::before{content:'';width:24px;height:2px;background:var(--accent-light);border-radius:2px}
+
+/* CONTACT STRIP */
+#contact-strip{background:var(--white);padding:64px 40px}
+.contact-strip-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.contact-strip-item{display:flex;align-items:flex-start;gap:16px}
+.contact-strip-icon{width:48px;height:48px;background:var(--warm);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-strip-text strong{display:block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light);margin-bottom:4px}
+.contact-strip-text span{font-size:.95rem;font-weight:500;color:var(--text-dark)}
+.contact-strip-text a{color:var(--primary-light)}
+
+/* FOOTER */
+footer{background:var(--text-dark);color:var(--white);padding:64px 40px 32px}
+.footer-inner{max-width:var(--max-width);margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:32px}
+.footer-tagline{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.7;margin-top:16px;max-width:280px}
+.footer-social{display:flex;gap:12px;margin-top:24px}
+.footer-social-link{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:var(--transition);color:rgba(255,255,255,.6)}
+.footer-social-link:hover{background:var(--accent);color:var(--white)}
+.footer-col h4{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.65);transition:var(--transition)}
+.footer-col ul li a:hover{color:var(--white);padding-left:4px}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between}
+.footer-legal{font-size:.78rem;color:rgba(255,255,255,.35)}
+.footer-legal a{color:rgba(255,255,255,.5)}
+
+/* ANIMATIONS */
 
 
-<!-- SEO Meta Tags -->
-<title>Preferred Residential Homes | Safe Behavioral Residential Care for Children &amp;amp; Youth</title>
-<meta name="description" content="Preferred Residential Homes provides safe, structured, and nurturing behavioral residential care for children and youth in Tolleson, AZ." />
-<meta property="og:title" content="Preferred Residential Homes | Safe Behavioral Residential Care for Children &amp;amp; Youth" />
-<meta property="og:description" content="Preferred Residential Homes provides safe, structured, and nurturing behavioral residential care for children and youth in Tolleson, AZ." />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Preferred Residential Homes | Safe Behavioral Residential Care for Children &amp;amp; Youth" />
-<meta name="twitter:description" content="Preferred Residential Homes provides safe, structured, and nurturing behavioral residential care for children and youth in Tolleson, AZ." />
-<!-- End SEO Meta Tags -->
 
 
-<script data-field-replace>
-(function(){
-  var params=new URLSearchParams(window.location.search);
-  var fields={};
-  var paramMap={
-    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
-    'email':'email','phone':'phone','company':'company',
-    'city':'city','state':'state','country':'country'
-  };
-  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
-  var hasUrlFields=false;
-  for(var p in paramMap){
-    var v=params.get(p);
-    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
-  }
-  var contactId=params.get('contact_id');
-  function esc(s){
-    if(!s)return s;
-    var d=document.createElement('div');
-    d.appendChild(document.createTextNode(s));
-    return d.innerHTML;
-  }
-  function doReplace(data){
-    var r={};
-    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
-    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
-    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
-    r['{{email}}']=esc(data.email||'');
-    r['{{phone}}']=esc(data.phone||'');
-    r['{{company}}']=esc(data.company||'');
-    r['{{city}}']=esc(data.city||'');
-    r['{{state}}']=esc(data.state||'');
-    r['{{country}}']=esc(data.country||'');
-    r['{{date}}']=new Date().toLocaleDateString();
-    r['{{time}}']=new Date().toLocaleTimeString();
-    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
-    r['{{tracking_id}}']=esc(data.trackingId||'');
-    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
-    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
-    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
-    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
-    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
-    r['{{ip_address}}']=esc(data.ipAddress||'');
-    r['{{ip}}']=esc(data.ipAddress||'');
-    if(data.customFields){
-      for(var k in data.customFields){
-        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
-      }
-    }
-    params.forEach(function(v,k){
-      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
-        r['{{'+k+'}}']=esc(v);
-      }
-    });
-    var hasValues=false;
-    for(var key in r){if(r[key]){hasValues=true;break;}}
-    if(!hasValues)return;
-    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
-      acceptNode:function(n){
-        var p=n.parentNode;
-        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
-        return NodeFilter.FILTER_ACCEPT;
-      }
-    });
-    var node;
-    while(node=walker.nextNode()){
-      var txt=node.nodeValue;
-      if(txt&&txt.indexOf('{{')>-1){
-        var changed=txt;
-        for(var ph in r){
-          if(r[ph]&&changed.indexOf(ph)>-1){
-            changed=changed.split(ph).join(r[ph]);
-          }
-        }
-        if(changed!==txt)node.nodeValue=changed;
-      }
-    }
-    var attrs=['value','placeholder','content','alt','title'];
-    attrs.forEach(function(attr){
-      var els=document.querySelectorAll('['+attr+'*="{{"]');
-      for(var i=0;i<els.length;i++){
-        var tag=els[i].tagName;
-        if(skipTags[tag])continue;
-        var val=els[i].getAttribute(attr);
-        if(val){
-          var nv=val;
-          for(var ph in r){
-            if(r[ph]&&nv.indexOf(ph)>-1){
-              nv=nv.split(ph).join(r[ph]);
-            }
-          }
-          if(nv!==val)els[i].setAttribute(attr,nv);
-        }
-      }
-    });
-  }
-  function run(){
-    if(contactId){
-      var xhr=new XMLHttpRequest();
-      xhr.open('GET','https://app.calldirector.ai/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4314');
-      xhr.onload=function(){
-        if(xhr.status===200){
-          try{
-            var resp=JSON.parse(xhr.responseText);
-            if(resp.success&&resp.contact){
-              var merged=resp.contact;
-              for(var k in fields){merged[k]=fields[k];}
-              doReplace(merged);
-              return;
-            }
-          }catch(e){}
-        }
-        if(hasUrlFields)doReplace(fields);
-      };
-      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
-      xhr.send();
-    }else if(hasUrlFields){
-      doReplace(fields);
-    }
-  }
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
-  else{run();}
-})();
-</script>
-<script data-payment>
-(function(){
-  var slug='vBUSH7hw4p';
-  var apiBase='https://app.calldirector.ai';
-  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
-  function findEmail(){
-    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
-    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
-    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
-    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
-    return '';
-  }
-  function findName(){
-    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
-    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
-    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
-    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
-    return '';
-  }
-  var __realProcessPayment=function(a,b,c,d,e){
-    var amountCents,email,productName,productDescription,customerName,quantity;
-    if(a&&typeof a==='object'){
-      amountCents=a.amountCents;email=a.email;productName=a.productName;
-      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
-    }else{
-      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
-      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
-    }
-    if(!email)email=findEmail();
-    if(!customerName)customerName=findName();
-    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
-    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
-    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
-    var successBase=window.location.href.split('?')[0];
-    var __pLoc=(document.documentElement.lang||navigator.language||'en');
-    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
-      method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
-    }).then(function(r){return r.json();}).then(function(d){
-      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
-      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
-    });
-  };
-  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
-  document.addEventListener('DOMContentLoaded',function(){
-    var urlParams=new URLSearchParams(window.location.search);
-    if(urlParams.get('payment')==='success'){
-      var pName=urlParams.get('product')||'your item';
-      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
-      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
-      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
-      document.body.appendChild(overlay);
-      var pBtn=document.getElementById('lp-pay-success-btn');
-      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
-    }
-  });
-})();
-</script>  <link rel="stylesheet" href="styles.css">
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  #mainNav,section,#trust-bar,#contact-strip,footer,#intake-cta{padding-left:24px;padding-right:24px}
+  .hero-content{grid-template-columns:1fr;gap:48px}
+  .hero-right{display:none}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-bar-inner{grid-template-columns:repeat(2,1fr)}
+  .trust-item:nth-child(2){border-right:none}
+  .why-us-grid{grid-template-columns:1fr}
+  .why-illustration{display:none}
+  .mission-inner{grid-template-columns:1fr;gap:48px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .contact-strip-inner{grid-template-columns:repeat(2,1fr)}
+  .intake-cta-inner{flex-direction:column;align-items:flex-start}
+  .intake-cta-actions{align-items:flex-start}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  #hero{padding:calc(var(--nav-height)+40px) 20px 60px;min-height:auto}
+  section{padding:56px 20px}
+  .services-grid{grid-template-columns:1fr}
+  .trust-bar-inner,.contact-strip-inner{grid-template-columns:1fr}
+  .trust-item{border-right:none;border-bottom:1px solid var(--warm-dark)}
+  .trust-item:last-child{border-bottom:none}
+  .footer-top{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .mission-values{grid-template-columns:1fr}
+  .hero-cta-group{flex-direction:column}
+  .btn-primary,.btn-ghost{justify-content:center}
+}
+</style>
+  <link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777349574072-558806767ad1937d.png">
+  <link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777410722181-afb3537c2bbf03f7.png">
+  <link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777410755834-a7418d613a17cd73.png">
 </head>
 <body>
+
 <nav id="mainNav" role="navigation" aria-label="Main navigation">
-  <a href="https://preferredrh.com/" class="nav-logo" aria-label="Preferred Residential Homes Home">
-    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.18)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.95"/><path d="M28 11L11 24L45 24L28 11Z" fill="white"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><rect x="14" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><rect x="36" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/><path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.7"/></svg>
+  <a href="https://preferredrh.com" class="nav-logo" aria-label="Preferred Residential Homes Home">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+      <!-- Background pill -->
+      <rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.18)"/>
+      <!-- House body -->
+      <path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.95"/>
+      <!-- Roof peak accent -->
+      <path d="M28 11L11 24L45 24L28 11Z" fill="white"/>
+      <!-- Rising arc / sunrise above roof -->
+      <path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/>
+      <!-- Door -->
+      <rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/>
+      <!-- Windows -->
+      <rect x="14" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/>
+      <rect x="36" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/>
+      <!-- Green sun dot at peak -->
+      <circle cx="28" cy="11" r="3.5" fill="#27AE60"/>
+      <!-- Small heart inside house -->
+      <path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.7"/>
+    </svg>
     <span class="nav-logo-text">Preferred Residential Homes</span>
   </a>
   <ul class="nav-links">
@@ -238,36 +253,66 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="https://preferredrh.com/services/">Services</a>
-  <a href="https://preferredrh.com/about/">About Us</a>
-  <a href="https://preferredrh.com/contact/">Contact</a>
+  <a href="https://preferredrh.com/about/">About Us</a><a href="https://preferredrh.com/contact/">Contact</a>
   <a href="https://preferredrh.com/intake/" class="nav-cta">Start Intake Process</a>
 </div>
+
 <main>
+
+<!-- HERO -->
 <section id="hero" aria-label="Welcome">
+
+  <!-- Slideshow -->
   <div id="hsWrap" aria-hidden="true" style="position:absolute;inset:0;overflow:hidden;z-index:0;">
     <div id="hs0" style="position:absolute;inset:0;background:url('https://app.calldirector.ai/objects/generated-images/218/1777349574072-558806767ad1937d.png') center top/cover no-repeat;opacity:1;transition:opacity 1.4s ease;"></div>
     <div id="hs1" style="position:absolute;inset:0;background:url('https://app.calldirector.ai/objects/generated-images/218/1777410722181-afb3537c2bbf03f7.png') center/cover no-repeat;opacity:0;transition:opacity 1.4s ease;"></div>
     <div id="hs2" style="position:absolute;inset:0;background:url('https://app.calldirector.ai/objects/generated-images/218/1777410755834-a7418d613a17cd73.png') center/cover no-repeat;opacity:0;transition:opacity 1.4s ease;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(8,24,45,0.85) 0%,rgba(13,46,74,0.70) 55%,rgba(13,46,74,0.30) 100%);"></div>
   </div>
+
+
+  
+
+  
   <div class="hero-content">
-    <div class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span>Now Accepting Referrals</div>
-    <h1 class="hero-title" style="color:#FFFFFF!important;text-shadow:0 2px 16px rgba(0,0,0,0.75),0 1px 4px rgba(0,0,0,0.9);">Safe, <em style="font-style:italic;color:#A9DFBF!important;">Structured,</em><br>and Nurturing Care<br>for Children</h1>
-    <p class="hero-subtitle" style="color:#FFFFFF!important;text-shadow:0 1px 10px rgba(0,0,0,0.8);">Preferred Residential Homes provides behavioral residential services designed to give children the stability, support, and future they deserve &mdash; in a warm, structured environment built for growth.</p>
-    <div class="hero-cta-group">
-      <a href="https://preferredrh.com/intake/" class="btn-primary">Start Intake Process</a>
-      <a href="https://preferredrh.com/services/" class="btn-ghost">Learn About Our Services</a>
+    <div class="hero-left">
+      <div class="hero-badge" style="color:#FFFFFF !important;background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.5);"><span class="hero-badge-dot" aria-hidden="true"></span>Now Accepting Referrals</div>
+      <h1 class="hero-title" style="color:#FFFFFF !important;text-shadow:0 2px 16px rgba(0,0,0,0.75),0 1px 4px rgba(0,0,0,0.9);">Safe, <em style="font-style:italic;color:#A9DFBF !important;">Structured,</em><br>and Nurturing Care<br>for Children</h1>
+      <p class="hero-subtitle" style="color:#FFFFFF !important;text-shadow:0 1px 10px rgba(0,0,0,0.8);">Preferred Residential Homes provides behavioral residential services designed to give children the stability, support, and future they deserve &mdash; in a warm, structured environment built for growth.</p>
+      <div class="hero-cta-group">
+        <a href="https://preferredrh.com/intake/" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          Start Intake Process
+        </a>
+        <a href="https://preferredrh.com/services/" class="btn-ghost">Learn About Our Services</a>
+      </div>
+    </div>
+    </div>
+    </section>
+
+<!-- TRUST BAR -->
+<section id="trust-bar" aria-label="Trust indicators">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="trust-text"><strong>Licensed &amp; Insured</strong><span>AZ Licensed &amp; Insured — BHRF2015</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+      <div class="trust-text"><strong>24/7 Support</strong><span>Round-the-clock care &amp; monitoring</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <div class="trust-text"><strong>Family-Centered</strong><span>Families are partners every step</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
+      <div class="trust-text"><strong>Individualized Plans</strong><span>Every child's path uniquely designed</span></div>
     </div>
   </div>
 </section>
-<section id="trust-bar" aria-label="Trust indicators">
-  <div class="trust-bar-inner">
-    <div class="trust-item"><div class="trust-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="trust-text"><strong>Licensed &amp; Insured</strong><span>AZ Licensed &amp; Insured — BHRF2015</span></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div class="trust-text"><strong>24/7 Support</strong><span>Round-the-clock care &amp; monitoring</span></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="trust-text"><strong>Family-Centered</strong><span>Families are partners every step</span></div></div>
-    <div class="trust-item"><div class="trust-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div><div class="trust-text"><strong>Individualized Plans</strong><span>Every child's path uniquely designed</span></div></div>
-  </div>
-</section>
+
+<!-- SERVICES OVERVIEW -->
 <section id="services-overview" aria-labelledby="services-heading">
   <div class="section-inner">
     <div class="section-header center">
@@ -276,89 +321,238 @@
       <p class="section-subtitle">Every service we provide is built around one goal &mdash; helping children grow, heal, and move toward a stable and fulfilling future.</p>
     </div>
     <div class="services-grid">
-      <article class="service-card"><img src="https://app.calldirector.ai/objects/generated-images/218/1777349605015-7e9c270494a11f13.png" alt="Cozy residential home living room" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"><div class="service-card-body"><h3>Behavioral Residential Services</h3><p>Safe, structured residential placements with 24/7 therapeutic support in a nurturing home environment designed for behavioral health needs.</p><a href="https://preferredrh.com/services/#behavioral" class="service-card-link">Learn more &rsaquo;</a></div></article>
-      <article class="service-card"><img src="https://app.calldirector.ai/objects/generated-images/218/1777349641527-c932c34ab8f6a691.png" alt="Diverse children in group activities" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"><div class="service-card-body"><h3>Youth Support Programs</h3><p>Tailored programs focused on emotional regulation, social skills, academic support, and behavioral growth.</p><a href="https://preferredrh.com/services/#youth" class="service-card-link">Learn more &rsaquo;</a></div></article>
-      <article class="service-card"><img src="https://app.calldirector.ai/objects/generated-images/218/1777349671579-407a11dacc1648c4.png" alt="Family meeting with staff reviewing care plan" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"><div class="service-card-body"><h3>Family-Centered Care</h3><p>We keep families actively involved at every stage &mdash; building communication, repairing bonds, and preparing children for successful transitions home.</p><a href="https://preferredrh.com/services/#family" class="service-card-link">Learn more &rsaquo;</a></div></article>
-      <article class="service-card"><img src="https://app.calldirector.ai/objects/generated-images/218/1777349705527-b0acca830728c36a.png" alt="Teenager learning to cook with adult support" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"><div class="service-card-body"><h3>Structured Daily Living</h3><p>Consistent routines and life skills programming that teach responsibility, independence, and self-regulation through daily practice.</p><a href="https://preferredrh.com/services/#daily-living" class="service-card-link">Learn more &rsaquo;</a></div></article>
-      <article class="service-card"><img src="https://app.calldirector.ai/objects/generated-images/218/1777349743412-c5e9e03bc32f6178.png" alt="Young person reviewing development goals with counselor" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"><div class="service-card-body"><h3>Individual Development Planning</h3><p>Personalized development plans created with families, caseworkers, and clinical staff &mdash; setting measurable goals and clear paths forward.</p><a href="https://preferredrh.com/services/#development" class="service-card-link">Learn more &rsaquo;</a></div></article>
-      <article class="service-card"><img src="https://app.calldirector.ai/objects/generated-images/218/1777349773668-a18e33abe87653ce.png" alt="Child sleeping peacefully in a safe bedroom" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"><div class="service-card-body"><h3>Safe Residential Placement</h3><p>A secure, stable placement for children who need structured residential support &mdash; staffed by trained professionals committed to safety and growth.</p><a href="https://preferredrh.com/services/#placement" class="service-card-link">Learn more &rsaquo;</a></div></article>
+
+      <!-- Card 1: Behavioral Residential -->
+      <article class="service-card">
+        <img class="service-card-art" src="https://app.calldirector.ai/objects/generated-images/218/1777349605015-7e9c270494a11f13.png" alt="A cozy, welcoming residential home living room with warm lighting and comfortable furniture" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy">
+        <div class="service-card-body">
+          <h3>Behavioral Residential Services</h3>
+          <p>Safe, structured residential placements with 24/7 therapeutic support in a nurturing home environment designed for behavioral health needs.</p>
+          <a href="https://preferredrh.com/services/#behavioral" class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Card 2: Youth Support Programs -->
+      <article class="service-card">
+        <img class="service-card-art" src="https://app.calldirector.ai/objects/generated-images/218/1777349641527-c932c34ab8f6a691.png" alt="Diverse children engaged in group activities with a supportive staff member" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy">
+        <div class="service-card-body">
+          <h3>Youth Support Programs</h3>
+          <p>Tailored programs for children and adolescents focused on emotional regulation, social skills, academic support, and behavioral growth.</p>
+          <a href="https://preferredrh.com/services/#youth" class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Card 3: Family-Centered Care -->
+      <article class="service-card">
+        <img class="service-card-art" src="https://app.calldirector.ai/objects/generated-images/218/1777349671579-407a11dacc1648c4.png" alt="Family meeting with parents, child, and a caring staff member reviewing a care plan" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy">
+        <div class="service-card-body">
+          <h3>Family-Centered Care</h3>
+          <p>We keep families actively involved at every stage &mdash; building communication, repairing bonds, and preparing children for successful transitions home.</p>
+          <a href="https://preferredrh.com/services/#family" class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Card 4: Structured Daily Living -->
+      <article class="service-card">
+        <img class="service-card-art" src="https://app.calldirector.ai/objects/generated-images/218/1777349705527-b0acca830728c36a.png" alt="A teenager learning to cook in a bright residential kitchen with adult support" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy">
+        <div class="service-card-body">
+          <h3>Structured Daily Living</h3>
+          <p>Consistent routines, life skills, and structured programming that teach responsibility, independence, and self-regulation through daily practice.</p>
+          <a href="https://preferredrh.com/services/#daily-living" class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Card 5: Individual Development Planning -->
+      <article class="service-card">
+        <img class="service-card-art" src="https://app.calldirector.ai/objects/generated-images/218/1777349743412-c5e9e03bc32f6178.png" alt="A young person reviewing their personal development goals with a counselor" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy">
+        <div class="service-card-body">
+          <h3>Individual Development Planning</h3>
+          <p>Personalized development plans created with families, caseworkers, and clinical staff &mdash; setting measurable goals and clear paths forward for each child.</p>
+          <a href="https://preferredrh.com/services/#development" class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Card 6: Safe Residential Placement -->
+      <article class="service-card">
+        <img class="service-card-art" src="https://app.calldirector.ai/objects/generated-images/218/1777349773668-a18e33abe87653ce.png" alt="A child sleeping peacefully in a safe, cozy bedroom" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy">
+        <div class="service-card-body">
+          <h3>Safe Residential Placement</h3>
+          <p>A secure, stable placement for children who need structured residential support &mdash; staffed by trained professionals committed to safety and therapeutic growth.</p>
+          <a href="https://preferredrh.com/services/#placement" class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+        </div>
+      </article>
+
     </div>
-    <div style="text-align:center;margin-top:48px"><a href="https://preferredrh.com/services/" class="btn-blue">View All Services &rsaquo;</a></div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="https://preferredrh.com/services/" class="btn-blue">View All Services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+    </div>
   </div>
 </section>
+
+<!-- WHY CHOOSE US -->
 <section id="why-us" aria-labelledby="why-heading">
   <div class="section-inner">
     <div class="why-us-grid">
-      <div class="why-illustration"><img src="https://app.calldirector.ai/objects/generated-images/218/1777349808251-dd3f49d43fa8ba6a.png" alt="Children playing joyfully outdoors in a safe supervised setting" style="width:100%;height:480px;object-fit:cover;border-radius:24px;display:block;" loading="lazy"></div>
+      <!-- Outdoor joy illustration -->
+      <div class="why-illustration">
+  <img src="https://app.calldirector.ai/objects/generated-images/218/1777349808251-dd3f49d43fa8ba6a.png" alt="Children playing joyfully outdoors in a safe, supervised residential setting on a sunny day" style="width:100%;height:480px;object-fit:cover;border-radius:24px;display:block;" loading="lazy">
+</div>
       <div>
         <span class="section-label">Why Families Choose Us</span>
-        <h2 class="section-title" id="why-heading" style="margin-bottom:16px">More Than a Placement &mdash; A Path Forward</h2>
+        <h2 class="section-title" id="why-heading">More Than a Placement &mdash; A Path Forward</h2>
         <p class="section-subtitle" style="margin-bottom:32px">We don't just provide a place to stay. We provide a structured foundation where children can begin to heal, grow, and build the skills they need for a successful future.</p>
         <div>
-          <div class="why-feature"><div class="why-feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div><div class="why-feature-text"><strong>Structured, Therapeutic Environment</strong><p>Consistent routines and clear expectations create the safety and predictability children with behavioral needs require to thrive.</p></div></div>
-          <div class="why-feature"><div class="why-feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div><div class="why-feature-text"><strong>Trained, Compassionate Staff</strong><p>Our team is specifically trained in behavioral health support and committed to treating every child with dignity, patience, and genuine care.</p></div></div>
-          <div class="why-feature"><div class="why-feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div><div class="why-feature-text"><strong>Transparent Family Communication</strong><p>Families and referral sources receive regular updates on progress and planning &mdash; because true collaboration leads to better outcomes.</p></div></div>
-          <div class="why-feature"><div class="why-feature-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div><div class="why-feature-text"><strong>Focused on Long-Term Success</strong><p>Our goal isn't just stabilization &mdash; it's equipping every child with the confidence and support network to succeed beyond our care.</p></div></div>
+          <div class="why-feature">
+            <div class="why-feature-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div>
+            <div class="why-feature-text"><strong>Structured, Therapeutic Environment</strong><p>Consistent routines and clear expectations create the safety and predictability children with behavioral needs require to thrive.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div>
+            <div class="why-feature-text"><strong>Trained, Compassionate Staff</strong><p>Our team is specifically trained in behavioral health support and committed to treating every child with dignity, patience, and genuine care.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div>
+            <div class="why-feature-text"><strong>Transparent Family Communication</strong><p>Families and referral sources receive regular updates on progress and planning &mdash; because true collaboration leads to better outcomes.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-check" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg></div>
+            <div class="why-feature-text"><strong>Focused on Long-Term Success</strong><p>Our goal isn't just stabilization &mdash; it's equipping every child with the confidence and support network to succeed beyond our care.</p></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- MISSION SNAPSHOT -->
 <section id="mission-snapshot" aria-labelledby="mission-heading">
   <div class="mission-inner">
-    <div class="mission-quote-wrap"><span class="mission-quote-mark" aria-hidden="true">"</span><p class="mission-quote-text">Every child deserves a safe place to grow, a structured environment to heal, and a compassionate team that believes in their potential &mdash; no matter where they've been.</p><div class="mission-quote-attr"><div class="mission-quote-line"></div><span>Preferred Residential Homes &mdash; Our Mission</span></div></div>
-    <div>
+    <div class="mission-quote-wrap">
+      <svg style="position:absolute;right:0;top:0;opacity:0.07" width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true"><circle cx="140" cy="40" r="80" fill="#27AE60"/><path d="M60 140 Q90 100 120 140" fill="#1B4F72"/></svg>
+      <span class="mission-quote-mark" aria-hidden="true">"</span>
+      <p class="mission-quote-text">Every child deserves a safe place to grow, a structured environment to heal, and a compassionate team that believes in their potential &mdash; no matter where they've been.</p>
+      <div class="mission-quote-attr"><div class="mission-quote-line" aria-hidden="true"></div><span>Preferred Residential Homes &mdash; Our Mission</span></div>
+    </div>
+    <div class="mission-right">
       <span class="section-label">Our Mission &amp; Vision</span>
       <h2 class="section-title" id="mission-heading" style="margin-bottom:20px">Driven by Purpose, Built for Children</h2>
-      <p style="font-size:1rem;color:var(--text-mid);line-height:1.8;margin-bottom:16px">Preferred Residential Homes was founded with a singular purpose: to create a residential environment where children and youth experiencing behavioral health challenges can find safety, stability, and a genuine path forward.</p>
-      <p style="font-size:1rem;color:var(--text-mid);line-height:1.8;margin-bottom:16px">We believe that with the right structure, compassionate care, and family involvement, every child has the capacity to grow &mdash; and we are committed to building that environment every single day.</p>
-      <div class="mission-values" role="list">
-        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot"></div>Compassion</div>
-        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot"></div>Integrity</div>
-        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot"></div>Safety</div>
-        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot"></div>Growth</div>
-        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot"></div>Family</div>
-        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot"></div>Excellence</div>
+      <p>Preferred Residential Homes was founded with a singular purpose: to create a residential environment where children and youth experiencing behavioral health challenges can find safety, stability, and a genuine path forward.</p>
+      <p>We believe that with the right structure, compassionate care, and family involvement, every child has the capacity to grow &mdash; and we are committed to building that environment every single day.</p>
+      <div class="mission-values" role="list" aria-label="Our core values">
+        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot" aria-hidden="true"></div>Compassion</div>
+        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot" aria-hidden="true"></div>Integrity</div>
+        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot" aria-hidden="true"></div>Safety</div>
+        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot" aria-hidden="true"></div>Growth</div>
+        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot" aria-hidden="true"></div>Family</div>
+        <div class="mission-value-chip" role="listitem"><div class="mission-value-dot" aria-hidden="true"></div>Excellence</div>
       </div>
-      <div style="margin-top:36px"><a href="https://preferredrh.com/about/" class="btn-blue">Our Story &rsaquo;</a></div>
+      <div style="margin-top:36px"><a href="https://preferredrh.com/about/" class="btn-blue">Our Story <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a></div>
     </div>
   </div>
 </section>
+
+<!-- INTAKE CTA -->
 <section id="intake-cta" aria-labelledby="intake-cta-heading">
   <div class="intake-cta-inner">
-    <div class="intake-cta-text"><div class="intake-cta-label">Begin the Process</div><h2 id="intake-cta-heading">Ready to Start the Intake Process?</h2><p>Whether you're a parent, guardian, caseworker, or referral source &mdash; our intake process is designed to be clear, simple, and respectful. Take the first step today.</p></div>
-    <div class="intake-cta-actions"><a href="https://preferredrh.com/intake/" class="btn-white">Start Intake Now &rsaquo;</a><p class="intake-cta-phone">Urgent? Call: <a href="tel:6233852064">(623) 385-2064</a></p></div>
+    <div class="intake-cta-text">
+      <div class="intake-cta-label">Begin the Process</div>
+      <h2 id="intake-cta-heading">Ready to Start the Intake Process?</h2>
+      <p>Whether you're a parent, guardian, caseworker, or referral source &mdash; our intake process is designed to be clear, simple, and respectful. Take the first step today.</p>
+    </div>
+    <div class="intake-cta-actions">
+      <a href="https://preferredrh.com/intake/" class="btn-white">Start Intake Now <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9,18 15,12 9,6"/></svg></a>
+      <p class="intake-cta-phone">Urgent? Call: <a href="tel:6233852064">(623) 385-2064</a></p>
+    </div>
   </div>
 </section>
+
+<!-- CONTACT STRIP -->
 <section id="contact-strip" aria-label="Contact information">
   <div class="contact-strip-inner">
-    <div class="contact-strip-item"><div class="contact-strip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg></div><div class="contact-strip-text"><strong>Phone</strong><span><a href="tel:6233852064">(623) 385-2064</a></span></div></div>
-    <div class="contact-strip-item"><div class="contact-strip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="contact-strip-text"><strong>Email</strong><span><a href="mailto:info@preferredrh.com">info@preferredrh.com</a></span></div></div>
-    <div class="contact-strip-item"><div class="contact-strip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="contact-strip-text"><strong>Address</strong><span>4050 S 94th Ln, Tolleson, AZ 85353</span></div></div>
-    <div class="contact-strip-item"><div class="contact-strip-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div class="contact-strip-text"><strong>Office Hours</strong><span>Mon&ndash;Fri: 9AM&ndash;5PM</span></div></div>
+    <div class="contact-strip-item">
+      <div class="contact-strip-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg></div>
+      <div class="contact-strip-text"><strong>Phone</strong><span><a href="tel:6233852064">(623) 385-2064</a></span></div>
+    </div>
+    <div class="contact-strip-item">
+      <div class="contact-strip-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div class="contact-strip-text"><strong>Email</strong><span><a href="mailto:info@preferredrh.com">info@preferredrh.com</a></span></div>
+    </div>
+    <div class="contact-strip-item">
+      <div class="contact-strip-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="contact-strip-text"><strong>Address</strong><span>4050 S 94th Ln, Tolleson, AZ 85353</span></div>
+    </div>
+    <div class="contact-strip-item">
+      <div class="contact-strip-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B4F72" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+      <div class="contact-strip-text"><strong>Office Hours</strong><span>Mon&ndash;Fri: 9AM&ndash;5PM</span></div>
+    </div>
   </div>
 </section>
 </main>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <a href="https://preferredrh.com/" class="nav-logo"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.08)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.8"/><path d="M28 11L11 24L45 24L28 11Z" fill="white" opacity="0.9"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/></svg><span class="nav-logo-text">Preferred Residential Homes</span></a>
+        <a href="https://preferredrh.com" class="nav-logo" aria-label="Preferred Residential Homes">
+          <svg width="48" height="48" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+      <rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.08)"/>
+      <path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.8"/>
+      <path d="M28 11L11 24L45 24L28 11Z" fill="white" opacity="0.9"/>
+      <path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+      <rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/>
+      <rect x="14" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.35)"/>
+      <rect x="36" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.35)"/>
+      <circle cx="28" cy="11" r="3.5" fill="#27AE60"/>
+      <path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.6"/>
+    </svg>
+          <span class="nav-logo-text">Preferred Residential Homes</span>
+        </a>
         <p class="footer-tagline">Providing safe, structured, and nurturing behavioral residential care for children and youth &mdash; one child at a time.</p>
-        <div class="footer-social"><a href="#" class="footer-social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a></div>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
       </div>
-      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="https://preferredrh.com/">Home</a></li><li><a href="https://preferredrh.com/about/">About Us</a></li><li><a href="https://preferredrh.com/services/">Services</a></li><li><a href="https://preferredrh.com/intake/">Start Intake</a></li><li><a href="https://preferredrh.com/contact/">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://preferredrh.com/services/#behavioral">Behavioral Residential</a></li><li><a href="https://preferredrh.com/services/#youth">Youth Support</a></li><li><a href="https://preferredrh.com/services/#family">Family-Centered Care</a></li><li><a href="https://preferredrh.com/services/#daily-living">Daily Living</a></li><li><a href="https://preferredrh.com/services/#development">Development Planning</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6233852064">(623) 385-2064</a></li><li><a href="mailto:info@preferredrh.com">info@preferredrh.com</a></li><li><a href="https://preferredrh.com/contact/">Send a Message</a></li><li><a href="https://preferredrh.com/intake/">Begin Intake</a></li></ul></div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+    <li><a href="https://preferredrh.com/about/">About Us</a></li><li><a href="https://preferredrh.com/services/">Services</a></li><li><a href="https://preferredrh.com/intake/">Start Intake</a></li><li><a href="https://preferredrh.com/contact/">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://preferredrh.com/services/#behavioral">Behavioral Residential</a></li><li><a href="https://preferredrh.com/services/#youth">Youth Support</a></li><li><a href="https://preferredrh.com/services/#family">Family-Centered Care</a></li><li><a href="https://preferredrh.com/services/#daily-living">Structured Daily Living</a></li><li><a href="https://preferredrh.com/services/#development">Development Planning</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6233852064">(623) 385-2064</a></li><li><a href="mailto:info@preferredrh.com">info@...com</a></li><li><a href="https://preferredrh.com/contact/">Send a Message</a></li><li><a href="https://preferredrh.com/intake/">Begin Intake</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Preferred Residential Homes, LLC. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p><p class="footer-legal" style="color:rgba(255,255,255,0.2)">AZ License #BHRF2015 &mdash; preferredrh.com</p></div>
+    <div class="footer-bottom">
+      <p class="footer-legal">&copy; 2025 Preferred Residential Homes. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a></p>
+      <p class="footer-legal" style="color:rgba(255,255,255,0.2)">preferredrh.com</p>
+    </div>
   </div>
 </footer>
-<!-- Scroll to top button -->
-<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+
+<script>
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+const btn=document.getElementById('hamburgerBtn');
+const menu=document.getElementById('mobileMenu');
+btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}));
+
+
+// Hero slideshow
+(function(){
+  var ids=["hs0","hs1","hs2"],cur=0;
+  setInterval(function(){
+    document.getElementById(ids[cur]).style.opacity="0";
+    cur=(cur+1)%ids.length;
+    document.getElementById(ids[cur]).style.opacity="1";
+  },5000);
+})();
+</script>
+
+<!-- Scroll to top -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" style="position:fixed;bottom:32px;right:32px;z-index:999;width:48px;height:48px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;box-shadow:0 4px 16px rgba(39,174,96,.45);display:none;align-items:center;justify-content:center;transition:all .3s ease;">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="18,15 12,9 6,15"/></svg>
 </button>
-
-  <script src="script.js"></script>
+<script>
+var st=document.getElementById('scrollTop');
+window.addEventListener('scroll',function(){st.style.display=window.scrollY>400?'flex':'none';},{passive:true});
+</script>
 </body>
 </html>
