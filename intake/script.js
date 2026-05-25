@@ -1,0 +1,1 @@
+var st=document.getElementById('scrollTop');window.addEventListener('scroll',function(){st.style.display=window.scrollY>400?'flex':'none';},{passive:true});
