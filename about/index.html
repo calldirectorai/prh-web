@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/prh-web/about/">
+<!-- BASE:END -->
+
+<base href="https://preferredrh.com/">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="canonical" href="https://preferredrh.com/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" href="https://app.calldirector.ai/objects/generated-images/218/1777411957908-0de1bd8b142925a2.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>About Us | Preferred Residential Homes</title>
+<meta name="description" content="Learn about Preferred Residential Homes — founded by Dr. Odilia S. Kwateng, DNP, APRN, FNP-C, PMHNP-BC. Licensed behavioral residential care in Tolleson, AZ." />
+<meta property="og:title" content="About Us | Preferred Residential Homes" />
+<meta property="og:description" content="Learn about Preferred Residential Homes — founded by Dr. Odilia S. Kwateng, DNP, APRN, FNP-C, PMHNP-BC. Licensed behavioral residential care in Tolleson, AZ." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About Us | Preferred Residential Homes" />
+<meta name="twitter:description" content="Learn about Preferred Residential Homes — founded by Dr. Odilia S. Kwateng, DNP, APRN, FNP-C, PMHNP-BC. Licensed behavioral residential care in Tolleson, AZ." />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://app.calldirector.ai/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4316');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='zK3cMTiN6';
+  var apiBase='https://app.calldirector.ai';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav id="mainNav" role="navigation" aria-label="Main navigation" data-section="navbar">
+  <a href="https://preferredrh.com/" class="nav-logo" aria-label="Preferred Residential Homes Home">
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.18)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.95"/><path d="M28 11L11 24L45 24L28 11Z" fill="white"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><rect x="14" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><rect x="36" y="27" width="6" height="5" rx="1" fill="rgba(27,79,114,0.4)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/><path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.7"/></svg>
+    <span class="nav-logo-text">Preferred Residential Homes</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="https://preferredrh.com/services.html">Services</a></li>
+    <li><a href="https://preferredrh.com/about.html" class="active">About Us</a></li><li><a href="https://preferredrh.com/contact.html">Contact</a></li>
+    <li><a href="https://preferredrh.com/intake.html" class="nav-cta">Start Intake</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu" data-section="mobile-menu">
+  <a href="https://preferredrh.com/services.html">Services</a><a href="https://preferredrh.com/about.html">About Us</a><a href="https://preferredrh.com/contact.html">Contact</a>
+  <a href="https://preferredrh.com/intake.html" class="nav-cta">Start Intake Process</a>
+</div>
+<main>
+<section id="page-hero" aria-label="About page hero" data-section="hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-breadcrumb"><a href="https://preferredrh.com/">Home</a> &rsaquo; About Us</div>
+    <h1>About Us</h1>
+    <p>We are a licensed behavioral residential care provider in Tolleson, Arizona &mdash; founded on a simple belief: every child deserves a safe, structured, and nurturing place to heal and grow.</p>
+  </div>
+</section>
+<section id="mission" aria-label="Our mission" data-section="mission">
+  <div class="mission-inner">
+    <span class="mission-quote-mark" aria-hidden="true">"</span>
+    <p class="mission-quote">Every child deserves a safe place to grow, a structured environment to heal, and a compassionate team that believes in their potential &mdash; no matter where they've been.</p>
+    <div class="mission-attr"><div class="mission-attr-line" aria-hidden="true"></div><span>Our Mission &mdash; Preferred Residential Homes</span><div class="mission-attr-line" aria-hidden="true"></div></div>
+  </div>
+</section>
+<section id="story" aria-labelledby="story-heading" data-section="story">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-text">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title" id="story-heading">Compassionate Youth Residential Care</h2>
+        <p>Preferred Residential Homes provides a safe, supportive, and structured environment for youth in need of stability, emotional support, and behavioral health guidance. Founded on the belief that every young person deserves a genuine home where they feel safe, seen, and supported &mdash; not just placed.</p>
+        <p>Under the leadership of Dr. Odilia S. Kwateng &mdash; a Psychiatric Mental Health Nurse Practitioner with over 19 years of healthcare and behavioral health experience &mdash; our home was established to fill a critical gap in the community: quality, structured, trauma-informed residential care that treats every child as an individual, not a case number.</p>
+        <p>We are licensed by the Arizona Department of Health Services as a Behavioral Health Residential Facility, and we take that responsibility seriously. Every decision we make, every policy we follow, and every person we hire is guided by one question: <em>"Is this in the best interest of the child?"</em></p>
+        <div class="license-badge" aria-label="Arizona ADHS License Information">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9,12 11,14 15,10"/></svg>
+          <span>AZ ADHS Licensed &mdash; BHRF #BHRF2015 &mdash; Tolleson, AZ 85353</span>
+        </div>
+      </div>
+      <div>
+        <div class="vision-card">
+          <span class="section-label">Our Vision</span>
+          <h3>A Community Where Every Child Has the Opportunity to Thrive</h3>
+          <p>We envision a future where no child falls through the cracks &mdash; where every young person who comes through our doors leaves with greater confidence, stronger skills, and a clear path forward.</p>
+          <p style="margin-top:16px">Our vision is to be the residential care provider that families, caseworkers, and communities trust completely &mdash; known for excellence, compassion, and outcomes that last.</p>
+        </div>
+        <div style="margin-top:28px;background:var(--accent-soft);border-radius:var(--radius-lg);padding:28px;border:1px solid var(--accent-light)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary)">5</div><div style="font-size:.8rem;font-weight:600;color:var(--text-mid);text-transform:uppercase;letter-spacing:.08em">Licensed Capacity</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary)">24/7</div><div style="font-size:.8rem;font-weight:600;color:var(--text-mid);text-transform:uppercase;letter-spacing:.08em">Staffed Support</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary)">19+</div><div style="font-size:.8rem;font-weight:600;color:var(--text-mid);text-transform:uppercase;letter-spacing:.08em">Years Experience</div></div>
+            <div style="text-align:center"><div style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--primary)">AZ</div><div style="font-size:.8rem;font-weight:600;color:var(--text-mid);text-transform:uppercase;letter-spacing:.08em">State Licensed</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="values" aria-labelledby="values-heading" data-section="values">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:16px"><span class="section-label">What We Stand For</span></div>
+    <h2 class="section-title" id="values-heading" style="text-align:center;margin-bottom:0">Our Core Values</h2>
+    <p style="text-align:center;font-size:1rem;color:var(--text-mid);max-width:540px;margin:16px auto 0">These six values guide every decision we make and every interaction we have.</p>
+    <div class="values-grid" role="list">
+      <div class="value-card" role="listitem"><span class="value-emoji" aria-hidden="true">❤️</span><h3>Compassion</h3><p>We lead with empathy &mdash; treating every child, family, and team member with kindness and genuine care.</p></div>
+      <div class="value-card" role="listitem"><span class="value-emoji" aria-hidden="true">🤝</span><h3>Integrity</h3><p>We do what we say and say what we do &mdash; honest, transparent, and accountable in everything.</p></div>
+      <div class="value-card" role="listitem"><span class="value-emoji" aria-hidden="true">🛡️</span><h3>Safety</h3><p>Physical and emotional safety is non-negotiable. Every decision starts with "Is this safe for the child?"</p></div>
+      <div class="value-card" role="listitem"><span class="value-emoji" aria-hidden="true">🌱</span><h3>Growth</h3><p>We believe every child has the capacity to grow &mdash; and we invest in creating the conditions for that growth daily.</p></div>
+      <div class="value-card" role="listitem"><span class="value-emoji" aria-hidden="true">🏠</span><h3>Family</h3><p>Family connection is central to healing. We honor and strengthen the bonds that matter most.</p></div>
+      <div class="value-card" role="listitem"><span class="value-emoji" aria-hidden="true">⭐</span><h3>Excellence</h3><p>We hold ourselves to the highest standards &mdash; because the children and families we serve deserve nothing less.</p></div>
+    </div>
+  </div>
+</section>
+<section id="founder" aria-labelledby="founder-heading" data-section="founder">
+  <div class="founder-grid">
+    <div class="founder-photo-wrap">
+      <img src="https://app.calldirector.ai/objects/generated-images/218/1777411914219-1950e0930908a323.png"
+           alt="Dr. Odilia S. Kwateng, DNP, APRN, FNP-C, PMHNP-BC — Founder and Executive Director"
+           class="founder-photo" loading="eager">
+      <div class="founder-badge"><div class="founder-badge-dot" aria-hidden="true"></div><div><strong>Founder &amp; Director</strong><span>Preferred Residential Homes</span></div></div>
+    </div>
+    <div class="founder-text">
+      <span class="section-label">Leadership</span>
+      <h2 class="founder-name" id="founder-heading">Dr. Odilia S. Kwateng, DNP, APRN, FNP-C, PMHNP-BC</h2>
+      <p class="founder-title">Founder &amp; Executive Director &mdash; Preferred Residential Homes, LLC<br><span style="font-size:.88rem;color:var(--text-light);font-weight:400">Board-Certified Psychiatric Mental Health Nurse Practitioner &middot; 19+ Years Experience</span></p>
+      <p>Preferred Residential Homes provides a safe, supportive, and structured environment for youth in need of stability, emotional support, and behavioral health guidance.</p>
+      <p>Founded by Dr. Odilia S. Kwateng, DNP, APRN, FNP-C, PMHNP-BC &mdash; a Board-Certified Psychiatric Mental Health Nurse Practitioner with 19+ years of healthcare and behavioral health experience &mdash; our mission is to empower youth through compassionate, trauma-informed care and individualized support.</p>
+      <p style="font-family:var(--font-display);font-size:1.05rem;font-style:italic;color:var(--primary);font-weight:600;margin-top:8px">Guided by Experience. Grounded in Compassion. Committed to Healing.</p>
+      <div style="margin:24px 0 8px"><span style="display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px"><span style="display:inline-block;width:24px;height:2px;background:var(--accent);border-radius:2px"></span>Our Focus</span></div>
+      <div class="founder-credentials" role="list" aria-label="Our areas of focus">
+        <span class="founder-cred" role="listitem">Safe &amp; Supportive Living Environment</span>
+        <span class="founder-cred" role="listitem">Trauma-Informed Care</span>
+        <span class="founder-cred" role="listitem">Behavioral &amp; Emotional Support</span>
+        <span class="founder-cred" role="listitem">Life-Skills Development</span>
+        <span class="founder-cred" role="listitem">Family &amp; Community Collaboration</span>
+        <span class="founder-cred" role="listitem">Youth Empowerment &amp; Mentorship</span>
+        <span class="founder-cred" role="listitem">AZ ADHS Licensed &mdash; BHRF2015</span>
+        <a href="mailto:kwateng@preferredrh.com" class="founder-cred" role="listitem" style="color:var(--primary-light);border-color:var(--accent-light)">kwateng@preferredrh.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="intake-cta" aria-labelledby="cta-heading" data-section="cta">
+  <div class="intake-cta-inner">
+    <div class="intake-cta-text"><div class="intake-cta-label">Get Started</div><h2 id="cta-heading">Ready to Learn More or Begin Intake?</h2><p>We welcome inquiries from families, guardians, caseworkers, and referral professionals. Our team is here to answer your questions.</p></div>
+    <div class="intake-cta-actions"><a href="https://preferredrh.com/intake.html" class="btn-white">Start Intake Now &rarr;</a><p class="intake-cta-phone">Call us: <a href="tel:6233852064">(623) 385-2064</a></p></div>
+  </div>
+</section>
+</main>
+<footer data-section="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="https://preferredrh.com/" class="nav-logo"><svg width="48" height="48" viewBox="0 0 56 56" fill="none"><rect width="56" height="56" rx="14" fill="rgba(255,255,255,0.08)"/><path d="M28 11L11 24V45H22V34H34V45H45V24L28 11Z" fill="white" opacity="0.8"/><path d="M28 11L11 24L45 24L28 11Z" fill="white" opacity="0.9"/><path d="M19 22C19 16.477 23.477 12 29 12" stroke="#A9DFBF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/><rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/><circle cx="28" cy="11" r="3.5" fill="#27AE60"/></svg><span class="nav-logo-text">Preferred Residential Homes</span></a>
+        <p class="footer-tagline">Providing safe, structured, and nurturing behavioral residential care for children and youth &mdash; one child at a time.</p>
+        <div class="footer-social"><a href="#" class="footer-social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="https://preferredrh.com/">Home</a></li><li><a href="https://preferredrh.com/about.html">About Us</a></li><li><a href="https://preferredrh.com/services.html">Services</a></li><li><a href="https://preferredrh.com/intake.html">Start Intake</a></li><li><a href="https://preferredrh.com/contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="https://preferredrh.com/services.html#behavioral">Behavioral Residential</a></li><li><a href="https://preferredrh.com/services.html#youth">Youth Support</a></li><li><a href="https://preferredrh.com/services.html#family">Family-Centered Care</a></li><li><a href="https://preferredrh.com/services.html#daily-living">Daily Living</a></li><li><a href="https://preferredrh.com/services.html#development">Development Planning</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6233852064">(623) 385-2064</a></li><li><a href="mailto:info@preferredrh.com">info@preferredrh.com</a></li><li><a href="https://preferredrh.com/contact.html">Send a Message</a></li><li><a href="https://preferredrh.com/intake.html">Begin Intake</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-legal">&copy; 2025 Preferred Residential Homes, LLC. All rights reserved.</p><p class="footer-legal" style="color:rgba(255,255,255,0.2)">AZ License #BHRF2015</p></div>
+  </div>
+</footer>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top" style="position:fixed;bottom:32px;right:32px;z-index:998;width:48px;height:48px;border-radius:50%;background:#27AE60;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(39,174,96,.45);display:none;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="18,15 12,9 6,15"/></svg></button>
+  <script src="script.js"></script>
+</body>
+</html>
