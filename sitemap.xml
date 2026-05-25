@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://calldirectorai.github.io/prh-web/about/</loc>
+    <lastmod>2026-05-25T17:05:54.817Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://calldirectorai.github.io/prh-web/intake/</loc>
-    <lastmod>2026-05-25T17:05:10.037Z</lastmod>
+    <lastmod>2026-05-25T17:05:24.570Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://calldirectorai.github.io/prh-web/</loc>
     <lastmod>2026-05-25T17:04:41.520Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://calldirectorai.github.io/prh-web/about/</loc>
-    <lastmod>2026-05-25T16:55:21.160Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
