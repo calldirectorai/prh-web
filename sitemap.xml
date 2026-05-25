@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://calldirectorai.github.io/prh-web/contact/</loc>
+    <lastmod>2026-05-25T16:51:04.295Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://calldirectorai.github.io/prh-web/intake/</loc>
     <lastmod>2026-05-25T16:50:53.514Z</lastmod>
     <changefreq>weekly</changefreq>
