@@ -212,7 +212,7 @@ footer{background:var(--text-dark);color:white;padding:64px 40px 32px}
       <circle cx="28" cy="11" r="3.5" fill="#27AE60"/>
       <path d="M28 31 C28 31 25 28.5 25 27 C25 25.5 26.5 25 28 27 C29.5 25 31 25.5 31 27 C31 28.5 28 31 28 31Z" fill="#27AE60" opacity="0.7"/>
     </svg>
-    <span class="nav-logo-text">Preferred Residential Homes</span>
+    <span class="nav-logo-text" style="display:none">Preferred Residential Homes</span>
   </a>
   <ul class="nav-links">
     <li><a href="https://preferredrh.com/services/">Services</a></li>
@@ -466,7 +466,7 @@ footer{background:var(--text-dark);color:white;padding:64px 40px 32px}
       <rect x="23" y="34" width="10" height="11" rx="2" fill="rgba(27,79,114,0.55)"/>
       <circle cx="28" cy="11" r="3.5" fill="#27AE60"/>
     </svg>
-          <span class="nav-logo-text">Preferred Residential Homes</span>
+          <span class="nav-logo-text" style="display:none">Preferred Residential Homes</span>
         </a>
         <p class="footer-tagline">Providing safe, structured, trauma-informed behavioral residential care for youth &mdash; empowering one young person at a time.</p>
         <div class="footer-social">
@@ -488,7 +488,12 @@ footer{background:var(--text-dark);color:white;padding:64px 40px 32px}
 
 <script>
 const nav=document.getElementById('mainNav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+window.addEventListener('scroll',()=>{
+  const scrolled = window.scrollY>40;
+  nav.classList.toggle('scrolled', scrolled);
+  const logo = document.getElementById('navLogo');
+  if(logo) logo.style.filter = scrolled ? 'none' : 'brightness(0) invert(1)';
+},{passive:true});
 const btn=document.getElementById('hamburgerBtn');
 const menu=document.getElementById('mobileMenu');
 btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
