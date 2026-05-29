@@ -61,6 +61,15 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
 .footer-bottom{display:flex;align-items:center;justify-content:space-between}.footer-legal{font-size:.78rem;color:rgba(255,255,255,.35)}.footer-legal a{color:rgba(255,255,255,.5)}
 @media(max-width:1024px){#mainNav,#resources,footer{padding-left:24px;padding-right:24px}.docs-grid{grid-template-columns:repeat(2,1fr)}.footer-top{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}#page-hero{padding:120px 20px 60px}#resources{padding:56px 20px}.docs-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;gap:12px;text-align:center}#scrollTop{bottom:20px;right:20px}}
+
+#page-hero{position:relative;padding:140px 40px 80px;overflow:hidden;min-height:320px;display:flex;align-items:center}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://app.calldirector.ai/objects/generated-images/218/1780028197688-eab7fef7728038cf.png');background-size:cover;background-position:center}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,24,45,0.52) 0%,rgba(13,46,74,0.38) 55%,rgba(13,46,74,0.15) 100%)}
+.page-hero-content{position:relative;z-index:2;max-width:var(--max-width);margin:0 auto;width:100%}
+.page-hero-breadcrumb{font-size:.8rem;color:rgba(255,255,255,.65);margin-bottom:16px}
+.page-hero-breadcrumb a{color:rgba(255,255,255,.65)}
+.page-hero-content h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:16px;text-shadow:0 2px 16px rgba(0,0,0,.4)}
+.page-hero-content p{font-size:1rem;color:rgba(255,255,255,.88);max-width:560px;line-height:1.75;text-shadow:0 1px 10px rgba(0,0,0,.4)}
 </style>
 </head>
 <body>
@@ -97,6 +106,15 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
     <div class="page-hero-breadcrumb"><a href="https://preferredrh.com/">Home</a> &rsaquo; Human Resources</div>
     <h1>Human Resources</h1>
     <p>All required employment forms, compliance documents, and onboarding paperwork for Preferred Residential Homes staff. Download, complete, and return to HR prior to your start date.</p>
+  </div>
+</section>
+<section id="page-hero" aria-label="Human Resources page hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-breadcrumb"><a href="https://preferredrh.com/">Home</a> &rsaquo; Human Resources</div>
+    <h1>Human Resources</h1>
+    <p>All required employment forms, compliance documents, and onboarding paperwork for Preferred Residential Homes staff.</p>
   </div>
 </section>
 <section id="resources" aria-label="HR Documents">
