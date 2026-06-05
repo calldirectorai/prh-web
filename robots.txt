@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://calldirectorai.github.io/prh-web/sitemap.xml
+Sitemap: https://preferredrh.com/sitemap.xml
