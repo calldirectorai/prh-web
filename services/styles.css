@@ -14,7 +14,7 @@
 .btn-primary:hover{background:#219a52;transform:translateY(-2px)}.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--primary);font-family:var(--font-body);font-size:1rem;font-weight:700;padding:18px 40px;border-radius:50px;border:none;cursor:pointer;transition:var(--transition);box-shadow:0 4px 24px rgba(0,0,0,.2);white-space:nowrap}
 .btn-white:hover{transform:translateY(-2px)}
 #page-hero{position:relative;padding:140px 40px 80px;overflow:hidden;min-height:360px;display:flex;align-items:center}
-.page-hero-bg{position:absolute;inset:0;background-image:url('https://app.calldirector.ai/objects/generated-images/218/1777411134258-4b14bc4fd4a977d4.png');background-size:cover;background-position:center}
+.page-hero-bg{position:absolute;inset:0;background-image:url('/assets/1777411134258-4b14bc4fd4a977d4.webp');background-size:cover;background-position:center}
 .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,30,55,0.88) 0%,rgba(27,79,114,0.7) 55%,rgba(13,46,74,0.4) 100%)}
 .page-hero-content{position:relative;z-index:2;max-width:var(--max-width);margin:0 auto;width:100%}
 .page-hero-breadcrumb{font-size:.8rem;color:rgba(255,255,255,.65);margin-bottom:16px}.page-hero-breadcrumb a{color:rgba(255,255,255,.65)}
