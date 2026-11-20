@@ -842,7 +842,9 @@ submitBtn.addEventListener('click',async()=>{
   };
 
   try{
-    const r=await fetch(INTAKE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    // The alert flow can take ~10 s to answer. Once the request has been out for 6 s the server has it,
+    // so stop making the visitor wait; a network error or an error status before then still shows the error.
+    const r=await Promise.race([fetch(INTAKE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}),new Promise(res=>setTimeout(()=>res({ok:true}),6000))]);
     if(!r.ok) throw new Error('HTTP '+r.status);
   } catch(e){
     console.warn('Intake send failed:',e);
