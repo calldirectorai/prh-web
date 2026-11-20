@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://preferredrh.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Preferred Residential Group Home — licensed youth behavioral residential care in Tolleson, AZ">
+<meta property="og:image:alt" content="Preferred Residential Group Home: licensed youth behavioral residential care in Tolleson, AZ">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Start Intake | Preferred Residential Group Home">
 <meta name="twitter:description" content="Begin intake for behavioral residential care at Preferred Residential Group Home in Tolleson, AZ. Confidential and respectful for families and referral sources.">
@@ -63,7 +63,7 @@ ul{list-style:none}
 
 .nav-links a.nav-cta{background:var(--accent);color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600}
 .nav-links a.nav-cta:hover{background:#219a52;transform:translateY(-1px)}
-.hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--white);padding:8px;border-radius:8px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;color:var(--primary);padding:8px;border-radius:8px}
 
 .mobile-menu{display:none;position:fixed;top:var(--nav-height);left:0;right:0;background:var(--white);box-shadow:var(--shadow);padding:20px 24px;z-index:999;border-top:3px solid var(--accent)}
 .mobile-menu.open{display:block}
@@ -393,6 +393,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
               <div class="form-group">
                 <label for="childAge">Child's Age</label>
                 <input type="number" id="childAge" name="childAge" placeholder="Age in years (6 to 17)" min="6" max="17">
+                <span class="error-msg" id="childAge-err">We serve ages 6 to 17. Please enter an age in that range.</span>
               </div>
             </div>
 
@@ -442,7 +443,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
                   <option>Within 30 Days</option>
                   <option>Within 2 Weeks</option>
                   <option>Within 1 Week</option>
-                  <option>Urgent — Immediate Need</option>
+                  <option>Urgent: Immediate Need</option>
                 </select>
                 <span class="error-msg" id="urgency-err">Please select an urgency level.</span>
               </div>
@@ -467,7 +468,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
             <div class="form-row full">
               <div class="form-group">
                 <label for="priorServicesDetail">If yes to prior services, describe briefly</label>
-                <textarea id="priorServicesDetail" name="priorServicesDetail" placeholder="Optional — describe prior behavioral health services received..." rows="3"></textarea>
+                <textarea id="priorServicesDetail" name="priorServicesDetail" placeholder="Optional: describe prior behavioral health services received..." rows="3"></textarea>
               </div>
             </div>
 
@@ -501,7 +502,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
             <div class="form-row full">
               <div class="form-group">
                 <label for="additionalNotes">Additional Notes</label>
-                <textarea id="additionalNotes" name="additionalNotes" placeholder="Anything else we should know before we reach out — diagnoses, behaviors, special needs, preferences, etc." rows="4"></textarea>
+                <textarea id="additionalNotes" name="additionalNotes" placeholder="Anything else we should know before we reach out, such as diagnoses, behaviors, special needs, preferences, etc." rows="4"></textarea>
               </div>
             </div>
 
@@ -516,7 +517,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
                   </div>
                   <strong>Click to upload or drag &amp; drop</strong>
                   <p>Referral documents, assessments, court orders, psychological evaluations</p>
-                  <p style="font-size:.76rem;margin-top:4px">PDF, DOC, DOCX, JPG, PNG — Max 10MB per file</p>
+                  <p style="font-size:.76rem;margin-top:4px">PDF, DOC, DOCX, JPG or PNG, up to 10MB per file</p>
                   <div class="file-name" id="fileName" aria-live="polite"></div>
                 </div>
               </div>
@@ -631,7 +632,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
         <p>✓ Reason for inquiry &amp; urgency</p>
         <p>✓ Any supporting documents</p>
         <div class="sidebar-divider"></div>
-        <p>You do not need to have every answer — provide what you can and we'll discuss the rest.</p>
+        <p>You do not need to have every answer. Provide what you can and we'll discuss the rest.</p>
       </div>
       <div class="sidebar-card" style="background:var(--accent-soft);border:1px solid var(--accent-light)">
         <h3 style="color:var(--primary)">Confidentiality</h3>
@@ -659,7 +660,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
           <img src="https://preferredrh.com/assets/logo.png" width="85" height="52" alt="" style="height:52px;width:auto;object-fit:contain;background:#fff;border-radius:10px;padding:6px 12px;display:block;">
           
         </a>
-        <p class="footer-tagline">Providing safe, structured, trauma-informed behavioral residential care for youth &mdash; empowering one young person at a time.</p>
+        <p class="footer-tagline">Providing safe, structured, trauma-informed behavioral residential care for youth, empowering one young person at a time.</p>
       </div>
       <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="https://preferredrh.com/about/">About Us</a></li><li><a href="https://preferredrh.com/services/">Services</a></li><li><a href="https://preferredrh.com/resources/">Human Resources</a></li><li><a href="https://preferredrh.com/intake/">Start Intake</a></li><li><a href="https://preferredrh.com/contact/">Contact</a></li></ul></div>
       <div class="footer-col"><h3>Services</h3><ul><li><a href="https://preferredrh.com/services/#behavioral">Behavioral Residential</a></li><li><a href="https://preferredrh.com/services/#youth">Youth Support</a></li><li><a href="https://preferredrh.com/services/#family">Family-Centered Care</a></li><li><a href="https://preferredrh.com/services/#daily-living">Daily Living</a></li><li><a href="https://preferredrh.com/services/#development">Development Planning</a></li></ul></div>
@@ -669,6 +670,7 @@ footer{background:var(--text-dark);color:#fff;padding:64px 40px 32px}
   </div>
 </footer>
 
+<script src="/assets/form-guard.js"></script>
 <script>
 // Nav scroll
 const nav=document.getElementById('mainNav');
@@ -749,23 +751,76 @@ document.getElementById('next-1').addEventListener('click',()=>{
 });
 document.getElementById('back-2').addEventListener('click',()=>goToStep(1));
 document.getElementById('next-2').addEventListener('click',()=>{
-  if(validate(['childName','urgency']))goToStep(3);
+  if(!validate(['childName','urgency']))return;
+  const ageEl=document.getElementById('childAge');
+  const age=ageEl.value===''?null:Number(ageEl.value);
+  if(age!==null && (!Number.isInteger(age) || age<6 || age>17)){
+    ageEl.classList.add('error');
+    const n=document.getElementById('childAge-err'); if(n)n.classList.add('show');
+    ageEl.focus(); return;
+  }
+  goToStep(3);
 });
 document.getElementById('back-3').addEventListener('click',()=>goToStep(2));
 
-// Submit
-document.getElementById('submitBtn').addEventListener('click',async()=>{
+// Submit (with PRH form guard: human gate, honeypot, link block, age check, reset)
+const intakeRoot=document.querySelector('#intake-portal .form-card');
+PRHGuard.init(intakeRoot,{fullName:100,phone:25,email:120,childName:100,reasonInquiry:2000,medications:300,priorServicesDetail:1500,additionalNotes:2000});
+const submitBtn=document.getElementById('submitBtn');
+const submitBtnHTML=submitBtn.innerHTML;
+const INTAKE_URL='https://app.calldirector.ai/api/webhooks/flow/3272/193dae13982b1dc8f77a4dd2900900a77db6596744d7d80fa11744bae78655b5';
+let resetTimer=null;
+
+function resetIntake(){
+  clearTimeout(resetTimer);
+  PRHGuard.clear(intakeRoot);
+  fileNameEl.textContent='';
+  PRHGuard.say(submitBtn,'');
+  submitBtn.disabled=false; submitBtn.innerHTML=submitBtnHTML;
+  document.getElementById('confirmation').style.display='none';
+  for(let i=1;i<=totalSteps;i++){
+    document.getElementById('form-step-'+i).classList.remove('active');
+    const ind=document.getElementById('step-indicator-'+i);
+    ind.classList.remove('active','completed');
+    document.getElementById('step-circle-'+i).textContent=i;
+  }
+  currentStep=1;
+  document.getElementById('form-step-1').classList.add('active');
+  document.getElementById('step-indicator-1').classList.add('active');
+}
+
+function showConfirmation(){
+  document.getElementById('form-step-3').classList.remove('active');
+  document.getElementById('step-indicator-3').classList.remove('active');
+  document.getElementById('step-indicator-3').classList.add('completed');
+  document.getElementById('step-circle-3').innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg>';
+  document.getElementById('confirmation').style.display='block';
+  window.scrollTo({top:document.querySelector('.form-card').offsetTop-100,behavior:'smooth'});
+  // Return the page to a clean form after the visitor has read the confirmation
+  resetTimer=setTimeout(resetIntake,15000);
+}
+
+submitBtn.addEventListener('click',async()=>{
   if(!validate(['consent']))return;
-  const submitBtn=document.getElementById('submitBtn');
+  const g=PRHGuard.check(intakeRoot,['fullName','childName','reasonInquiry','medications','priorServicesDetail','additionalNotes']);
+  if(g==='bot'){ showConfirmation(); return; }
+  if(g==='webdriver'){ PRHGuard.say(submitBtn,'Please call our intake line at <a href="tel:6233852064">(623) 385-2064</a> to start intake.'); return; }
+  if(g==='slow-down'){ PRHGuard.say(submitBtn,'One moment, then press Submit again.'); return; }
+  if(g.indexOf('link:')===0){ PRHGuard.say(submitBtn,'Please remove website links from your answers, then submit again.'); return; }
+  PRHGuard.say(submitBtn,'');
   submitBtn.disabled=true;
   submitBtn.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg> Submitting...';
 
   const contactMethod=document.querySelector('input[name="contactMethod"]:checked')?.value||'Phone';
+  const typedName=document.getElementById('fullName').value.trim();
+  const typedEmail=document.getElementById('email').value.trim();
   const payload={
-    contactName: document.getElementById('fullName').value.trim(),
+    contactName: typedName,
     contactPhone: document.getElementById('phone').value.trim(),
-    contactEmail: document.getElementById('email').value.trim(),
+    contactEmail: typedEmail,
     data:{
+      requester_name: typedName,
+      requester_email: typedEmail,
       relationship: document.getElementById('relationship').value,
       contactMethod,
       bestTime: document.getElementById('bestTime').value,
@@ -787,23 +842,15 @@ document.getElementById('submitBtn').addEventListener('click',async()=>{
   };
 
   try{
-    await fetch('https://app.calldirector.ai/api/webhooks/flow/3272/193dae13982b1dc8f77a4dd2900900a77db6596744d7d80fa11744bae78655b5',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(payload),
-      mode:'no-cors'
-    });
+    const r=await fetch(INTAKE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    if(!r.ok) throw new Error('HTTP '+r.status);
   } catch(e){
-    console.warn('Webhook error:',e);
+    console.warn('Intake send failed:',e);
+    submitBtn.disabled=false; submitBtn.innerHTML=submitBtnHTML;
+    PRHGuard.say(submitBtn,'We couldn&rsquo;t send your form. Please try again, or call our intake line at <a href="tel:6233852064">(623) 385-2064</a>.');
+    return;
   }
-
-  // Show confirmation regardless (no-cors won't return status)
-  document.getElementById('form-step-3').classList.remove('active');
-  document.getElementById('step-indicator-3').classList.remove('active');
-  document.getElementById('step-indicator-3').classList.add('completed');
-  document.getElementById('step-circle-3').innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg>';
-  document.getElementById('confirmation').style.display='block';
-  window.scrollTo({top:document.querySelector('.form-card').offsetTop-100,behavior:'smooth'});
+  showConfirmation();
 });
 </script>
 
